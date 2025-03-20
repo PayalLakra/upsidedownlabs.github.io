@@ -1,0 +1,1186 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>BioAmp v1.5 &#8212; upsidedownlabs.github.io  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hardware/bioamp/bioamp-v1.5/index';</script>
+    <link rel="canonical" href="docs.upsidedownlabs.tech/hardware/bioamp/bioamp-v1.5/index.html" />
+    <link rel="icon" href="../../../_static/logo_sqr_bgw.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Muscle BioAmp Candy" href="../muscle-bioamp-candy/index.html" />
+    <link rel="prev" title="Heart BioAmp Candy" href="../heart-bioamp-candy/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Mar 20, 2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">Welcome to Upside Down Labs docs site!</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo_black_hr_nbg.svg" class="logo__image only-light" alt="upsidedownlabs.github.io  documentation - Home"/>
+    <img src="../../../_static/logo_white_hr_nbg.svg" class="logo__image only-dark pst-js-only" alt="upsidedownlabs.github.io  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../software/index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../software/index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">BioAmp Hardware</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../neuro-play-ground-lite/index.html">Neuro Play Ground (NPG) Lite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bioamp-exg-pill/index.html">BioAmp EXG Pill</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../muscle-bioamp-shield/index.html">Muscle BioAmp Shield</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../muscle-bioamp-patchy/index.html">Muscle BioAmp Patchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../muscle-bioamp-blip/index.html">Muscle BioAmp Blip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../heart-bioamp-candy/index.html">Heart BioAmp Candy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">BioAmp v1.5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../muscle-bioamp-candy/index.html">Muscle BioAmp Candy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../muscle-bioamp-biscute/index.html">Muscle BioAmp Biscute</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Hardware</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">BioAmp v1.5</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="bioamp-v1-5">
+<span id="id1"></span><h1>BioAmp v1.5<a class="headerlink" href="#bioamp-v1-5" title="Link to this heading">#</a></h1>
+<p><span class="sd-sphinx-override sd-badge sd-bg-danger sd-bg-text-danger">2023 Edition</span></p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>It is a small size portable biopotential amplifier with a no code setup to record and listen to your muscle signals (EMG) non
+invasively. The best part is that it doesn’t require any microcontroller (like Arduino) to sample the signal. You just plug a 9V
+battery into the board, electrodes to the body, and an audio jack to a mobile/laptop, and you are ready to record signals from
+muscles (EMG) using softwares like audacity or Backyard Brain’s spike recorder app.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/bioamp-v1.5.png"><img alt="../../../_images/bioamp-v1.5.png" src="../../../_images/bioamp-v1.5.png" style="width: 800px;" /></a>
+</figure>
+</section>
+<section id="features-specifications">
+<h2>Features &amp; Specifications<a class="headerlink" href="#features-specifications" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Minimum Input Voltage</p></td>
+<td><p>7-9 V</p></td>
+</tr>
+<tr class="row-even"><td><p>Input Impedance</p></td>
+<td><p>10^7 ohm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fixed Gain</p></td>
+<td><p>~200x</p></td>
+</tr>
+<tr class="row-even"><td><p>BioPotentials</p></td>
+<td><p>EMG (Electromyography)</p></td>
+</tr>
+<tr class="row-odd"><td><p>No. of channels</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Electrodes</p></td>
+<td><p>3 (Positive, Negative, and Reference)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dimensions</p></td>
+<td><p>5.0 x 3.0 cm</p></td>
+</tr>
+<tr class="row-even"><td><p>Open Source</p></td>
+<td><p>Hardware + Software</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Link to this heading">#</a></h2>
+<p>Images below shows a quick overview of the hardware design.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mt-4 sd-mb-4 sd-ml-0 sd-mr-0 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>PCB Front</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<figure class="align-default">
+<img alt="../../../_images/front-pcb.png" src="../../../_images/front-pcb.png" />
+</figure>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>PCB Back</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<figure class="align-default">
+<img alt="../../../_images/back-pcb.png" src="../../../_images/back-pcb.png" />
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/16.png"><img alt="../../../_images/16.png" src="../../../_images/16.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-text">Assembled BioAmp v1.5</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="contents-of-the-kit">
+<h2>Contents of the kit<a class="headerlink" href="#contents-of-the-kit" title="Link to this heading">#</a></h2>
+<figure class="align-default">
+<img alt="../../../_images/kit-contents1.png" src="../../../_images/kit-contents1.png" />
+</figure>
+</section>
+<section id="software-requirements">
+<h2>Software requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h2>
+<p>Before you start using the kit, download Backyard Brains’ <a class="reference external" href="https://backyardbrains.com/products/spikerecorder">Spike Recorder</a> or <a class="reference external" href="https://www.audacityteam.org/download/">Audacity</a> according to the operating system you are using (Windows, OSX, Linux).</p>
+</section>
+<section id="assembling-the-kit">
+<h2>Assembling the kit<a class="headerlink" href="#assembling-the-kit" title="Link to this heading">#</a></h2>
+<p>You can get your own BioAmp v1.5 bag of parts from our <a class="reference external" href="https://linktr.ee/Upside_Down_Labs_stores">online stores</a> (shipping worldwide) and for assembling the board you can take a look at the step by step guide given below.</p>
+<p><strong>Note:</strong> Follow the highlighted yellow shapes to assemble your BioAmp v1.5!</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mt-2 sd-mb-2 sd-ml-0 sd-mr-0 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id3">
+<img alt="../../../_images/1.png" src="../../../_images/1.png" />
+<figcaption>
+<p><span class="caption-text">Step 1 - Bare Board</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id4">
+<img alt="../../../_images/2-100K-resistor.png" src="../../../_images/2-100K-resistor.png" />
+<figcaption>
+<p><span class="caption-text">Step 2 - 100K Resistors</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id5">
+<img alt="../../../_images/3-2.2K-resistor.png" src="../../../_images/3-2.2K-resistor.png" />
+<figcaption>
+<p><span class="caption-text">Step 3 - 2.2K Resistor</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id6">
+<img alt="../../../_images/4-1K-resistor.png" src="../../../_images/4-1K-resistor.png" />
+<figcaption>
+<p><span class="caption-text">Step 4 - 1K Resistors</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id7">
+<img alt="../../../_images/5-220K-resistor.png" src="../../../_images/5-220K-resistor.png" />
+<figcaption>
+<p><span class="caption-text">Step 5 - 220K Resistors</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id8">
+<img alt="../../../_images/6-10K-resistor.png" src="../../../_images/6-10K-resistor.png" />
+<figcaption>
+<p><span class="caption-text">Step 6 - 10K Resistors</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id9">
+<img alt="../../../_images/7-100nF-capacitor.png" src="../../../_images/7-100nF-capacitor.png" />
+<figcaption>
+<p><span class="caption-text">Step 7 - 100nF Capacitors</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id10">
+<img alt="../../../_images/8-1nF-capacitor.png" src="../../../_images/8-1nF-capacitor.png" />
+<figcaption>
+<p><span class="caption-text">Step 8 - 1nF Capacitors</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id11">
+<img alt="../../../_images/9-connectors.png" src="../../../_images/9-connectors.png" />
+<figcaption>
+<p><span class="caption-text">Step 9 - JST PH Connectors</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id12">
+<img alt="../../../_images/10-socket.png" src="../../../_images/10-socket.png" />
+<figcaption>
+<p><span class="caption-text">Step 10 - IC Socket</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id13">
+<img alt="../../../_images/11-IC.png" src="../../../_images/11-IC.png" />
+<figcaption>
+<p><span class="caption-text">Step 11 - IC</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id14">
+<img alt="../../../_images/12-LED.png" src="../../../_images/12-LED.png" />
+<figcaption>
+<p><span class="caption-text">Step 12 - Power LED</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id15">
+<img alt="../../../_images/13-47uF-capacitor.png" src="../../../_images/13-47uF-capacitor.png" />
+<figcaption>
+<p><span class="caption-text">Step 13 - 47uF Capacitors</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id16">
+<img alt="../../../_images/14-switch.png" src="../../../_images/14-switch.png" />
+<figcaption>
+<p><span class="caption-text">Step 14 - Switch</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<figure class="align-default" id="id17">
+<img alt="../../../_images/15-headphone-jack.png" src="../../../_images/15-headphone-jack.png" />
+<figcaption>
+<p><span class="caption-text">Step 15 - Headphone jack</span><a class="headerlink" href="#id17" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="using-the-kit">
+<h2>Using the kit<a class="headerlink" href="#using-the-kit" title="Link to this heading">#</a></h2>
+<p>The image below shows the possibilities of using BioAmp v1.5. Seems complicated? Don’t worry, we’ll explain each and every step in detail. So follow along to create your own setup.</p>
+<figure class="align-center">
+<img alt="../../../_images/bioamp-v1-5-connections.png" src="../../../_images/bioamp-v1-5-connections.png" />
+</figure>
+<section id="step-1-connecting-the-cables">
+<h3>Step 1: Connecting the cables<a class="headerlink" href="#step-1-connecting-the-cables" title="Link to this heading">#</a></h3>
+<p>Connect the BioAmp cable, 9V snap cable and BioAmp AUX cable to BioAmp v1.5 by inserting the cable ends in the respective JST PH connectors as shown below.</p>
+<figure class="align-center">
+<img alt="../../../_images/board-with-cables.png" src="../../../_images/board-with-cables.png" />
+</figure>
+</section>
+<section id="step-2-skin-preparation">
+<h3>Step 2: Skin Preparation<a class="headerlink" href="#step-2-skin-preparation" title="Link to this heading">#</a></h3>
+<p>Apply Nuprep Skin Preparation Gel on the skin surface where electrodes would be placed to remove dead skin cells and clean the skin from dirt. After rubbing the skin surface thoroughly, clean it with an alcohol wipe or a wet wipe.</p>
+<p>For more information, please check out detailed step by step <a class="reference internal" href="../../../guides/usage-guides/skin-preparation/index.html#skin-preparation"><span class="std std-ref">Skin Preparation Guide</span></a>.</p>
+</section>
+<section id="step-3-electrode-placements">
+<h3>Step 3: Electrode placements<a class="headerlink" href="#step-3-electrode-placements" title="Link to this heading">#</a></h3>
+<p>We have 2 options to measure the EMG signals, either using the gel electrodes or using dry electrode based Muscle BioAmp Band. You can try both of them one by one.</p>
+<section id="using-gel-electrodes">
+<h4>Using gel Electrodes<a class="headerlink" href="#using-gel-electrodes" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Connect the BioAmp cable to gel electrodes.</p></li>
+<li><p>Peel the plastic backing from the electrodes.</p></li>
+<li><p>Place the IN+ and IN- cables on the arm near the ulnar nerve &amp; REF (reference) at the back of your hand as shown in the connection diagram.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../../_images/bioamp-v1-5-emg.png" src="../../../_images/bioamp-v1-5-emg.png" />
+</figure>
+</section>
+<section id="using-muscle-bioamp-band">
+<h4>Using Muscle BioAmp Band<a class="headerlink" href="#using-muscle-bioamp-band" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Connect the BioAmp cable to Muscle BioAmp Band in a way such that IN+ and IN- are placed on the arm near the ulnar nerve &amp; REF (reference) on the far side of the band.</p></li>
+<li><p>Now put a small drop of electrode gel between the skin and metallic part of BioAmp cable to get the best results.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These BioAmp Cable connections to gel electrodes/band are specifically for this version of BioAmp v1.5 only. The connections for other BioAmp hardware can be different.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>In this demonstration we are recording EMG signals from the ulnar nerve, but you can record EMG from other areas as well (biceps, triceps, legs, jaw etc) as per your project requirements. Just make sure to place the IN+, IN- electrodes on the targeted muscle and REF on a bony part.</p></li>
+<li><p>You can visit the complete documentation on how to <a class="reference internal" href="../../../guides/usage-guides/using-bioamp-bands/index.html#using-bioamp-bands"><span class="std std-ref">assemble and use the BioAmp Bands</span></a>.</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="step-4-connecting-9v-battery">
+<h3>Step 4: Connecting 9V battery<a class="headerlink" href="#step-4-connecting-9v-battery" title="Link to this heading">#</a></h3>
+<p>Connect any 9V battery to BioAmp v1.5 using the 9V snap cable. Now activate the board by flipping ON the power switch, and you’ll notice an LED light up, showing that the board is ready to use.</p>
+<figure class="align-center">
+<img alt="../../../_images/9v-battery.png" src="../../../_images/9v-battery.png" />
+</figure>
+</section>
+<section id="step-5-listen-to-your-muscle-signals">
+<h3>Step 5: Listen to your muscle signals<a class="headerlink" href="#step-5-listen-to-your-muscle-signals" title="Link to this heading">#</a></h3>
+<p>You can either listen to the muscle signals (EMG) on a speaker or wired earphones/headphones. Let’s try both of them.</p>
+<section id="using-speakers">
+<h4>Using speakers<a class="headerlink" href="#using-speakers" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Connect the BioAmp AUX cable on a bluetooth speaker that have 3.5mm jack support.</p></li>
+<li><p>Switch on the speaker and turn the volume to maximum.</p></li>
+<li><p>Flex and listen to your muscles.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../../_images/listening-emg-2.png" src="../../../_images/listening-emg-2.png" />
+</figure>
+</section>
+<section id="using-wired-earphones-headphones">
+<h4>Using wired earphones/headphones<a class="headerlink" href="#using-wired-earphones-headphones" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Plug your wired earphones or headphones on the 3.5mm jack of BioAmp v1.5.</p></li>
+<li><p>Plug it in your ears.</p></li>
+<li><p>Flex and listen to your muscles.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/listening-emg-3.png"><img alt="../../../_images/listening-emg-3.png" src="../../../_images/listening-emg-3.png" style="width: 80%;" /></a>
+</figure>
+</section>
+</section>
+<section id="step-6-visualize-emg-signals-on-mobile-phone">
+<h3>Step 6: Visualize EMG signals on mobile phone<a class="headerlink" href="#step-6-visualize-emg-signals-on-mobile-phone" title="Link to this heading">#</a></h3>
+<p>Connect the BioAmp AUX cable to your mobile phone/tablet that has 3.5mm jack support. Now you can use various apps to visualise the signals.</p>
+<section id="using-phone-recorder-app">
+<h4>Using Phone Recorder app<a class="headerlink" href="#using-phone-recorder-app" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Open any audio recorder app on your mobile tablet.</p></li>
+<li><p>Flex your muscle to be able to record the muscle signals.</p></li>
+<li><p>If you want to extract that data then it will be saved by default as a .wav file but you can convert it in any other format according to your project requirements.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/emg-in-mobile-2.png"><img alt="../../../_images/emg-in-mobile-2.png" src="../../../_images/emg-in-mobile-2.png" style="width: 80%;" /></a>
+</figure>
+</section>
+<section id="using-backyard-brains-spike-recorder-mobile-app">
+<h4>Using Backyard Brains’ Spike Recorder mobile app<a class="headerlink" href="#using-backyard-brains-spike-recorder-mobile-app" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Download the <a class="reference external" href="https://play.google.com/store/apps/details?id=com.backyardbrains&amp;pli=1">Spike Recorder App</a> from playstore.</p></li>
+<li><p>Open the app, click the setting icon on the top right corner and set the recording type to EMG.</p></li>
+<li><p>Apply the 50Hz or 60Hz notch filter depending on the country you are living in. For example if you are in India then the AC current oscillates at a frequency of 50Hz but it oscillates at 60Hz frequency in USA. This AC current acts as a noise in the signals so we have to remove it by applying this notch filter.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/spike-recorder-mobile.jpg"><img alt="../../../_images/spike-recorder-mobile.jpg" src="../../../_images/spike-recorder-mobile.jpg" style="width: 60%;" /></a>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Again click on the setting icon to close it and you are ready.</p></li>
+<li><p>Flex your muscles to be able to visualize the muscle signals (EMG).</p></li>
+<li><p>You can record the EMG data as a .wav file by pressing the record button on the top right corner of the app and then convert it in any other format as per your project requirements.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/emg-in-mobile.png"><img alt="../../../_images/emg-in-mobile.png" src="../../../_images/emg-in-mobile.png" style="width: 80%;" /></a>
+</figure>
+</section>
+</section>
+<section id="step-7-visualize-the-emg-signals-on-laptop">
+<h3>Step 7: Visualize the EMG signals on laptop<a class="headerlink" href="#step-7-visualize-the-emg-signals-on-laptop" title="Link to this heading">#</a></h3>
+<p>Connect the BioAmp AUX cable to your laptop that has 3.5mm jack support. Now you can install various softwares on your laptop to visualise the signals.</p>
+<section id="using-backyard-brains-spike-recorder">
+<h4>Using Backyard Brains’ Spike Recorder<a class="headerlink" href="#using-backyard-brains-spike-recorder" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Install the spike recorder software that you downloaded earlier.</p></li>
+<li><p>Open the software, click the setting icon on the top right corner and set the low band pass filter to 72Hz and high band pass filter to 720Hz.</p></li>
+<li><p>Apply the 50Hz or 60Hz notch filter depending on the country you are living in. For example if you are in India then the AC current oscillates at a frequency of 50Hz but it oscillates at 60Hz frequency in USA. This AC current acts as a noise in the signals so we have to remove it by applying this notch filter.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../../_images/spike-recorder-laptop.png" src="../../../_images/spike-recorder-laptop.png" />
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Again click on the setting icon to close it and you are ready.</p></li>
+<li><p>Flex your muscles to be able to visualize the muscle signals (EMG)</p></li>
+<li><p>You can record the EMG data as a .wav file by pressing the record button on the top right corner of the app and then convert it in any other format as per your project requirements.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../../_images/emg-in-laptop.png" src="../../../_images/emg-in-laptop.png" />
+</figure>
+</section>
+<section id="using-audacity">
+<h4>Using Audacity<a class="headerlink" href="#using-audacity" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Install the audacity software that you downloaded earlier.</p></li>
+<li><p>Open the software and set the recording device to microphone.</p></li>
+<li><p>Flex your muscles to be able to visualize the muscle signals (EMG)</p></li>
+<li><p>By default the EMG data would be recorded as a .wav file but you can convert it in any other format as per your project requirements.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../../_images/emg-in-audacity.png" src="../../../_images/emg-in-audacity.png" />
+</figure>
+</section>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../heart-bioamp-candy/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Heart BioAmp Candy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../muscle-bioamp-candy/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Muscle BioAmp Candy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features-specifications">Features &amp; Specifications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware">Hardware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents-of-the-kit">Contents of the kit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assembling-the-kit">Assembling the kit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-kit">Using the kit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-connecting-the-cables">Step 1: Connecting the cables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-skin-preparation">Step 2: Skin Preparation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-electrode-placements">Step 3: Electrode placements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-gel-electrodes">Using gel Electrodes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-muscle-bioamp-band">Using Muscle BioAmp Band</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-connecting-9v-battery">Step 4: Connecting 9V battery</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-listen-to-your-muscle-signals">Step 5: Listen to your muscle signals</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-speakers">Using speakers</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-wired-earphones-headphones">Using wired earphones/headphones</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-visualize-emg-signals-on-mobile-phone">Step 6: Visualize EMG signals on mobile phone</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-phone-recorder-app">Using Phone Recorder app</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-backyard-brains-spike-recorder-mobile-app">Using Backyard Brains’ Spike Recorder mobile app</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-visualize-the-emg-signals-on-laptop">Step 7: Visualize the EMG signals on laptop</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-backyard-brains-spike-recorder">Using Backyard Brains’ Spike Recorder</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-audacity">Using Audacity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/upsidedownlabs/upsidedownlabs.github.io/edit/mainhardware/bioamp/bioamp-v1.5/index.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/hardware/bioamp/bioamp-v1.5/index.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+    
+
+    
+        <a role="button" href="../../../bioamp-v1.5.pdf" target="_blank">
+            <i class="fa-solid fa-download"></i> Download PDF
+        </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Upside Down Labs.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Mar 20, 2025.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
