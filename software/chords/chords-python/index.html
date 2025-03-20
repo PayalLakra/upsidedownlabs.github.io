@@ -565,6 +565,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../chords-web/index.html">Chords-Web</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chords-Python</a></li>
 
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">BioAmp Software</span></p>
 <ul class="nav bd-sidenav">
@@ -779,48 +780,38 @@ If you run the following command:</p>
 <h3>Features<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <section id="real-time-ecg-visualization">
 <h4>1. Real-Time ECG Visualization:<a class="headerlink" href="#real-time-ecg-visualization" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Displays real-time ECG signals in a dynamic plot using <cite>pyqtgraph</cite>.</p></li>
 <li><p>Supports adjustable y-axis scaling based on the sampling rate (e.g., 250 Hz or 500 Hz).</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="r-peak-detection">
 <h4>2. R-Peak Detection:<a class="headerlink" href="#r-peak-detection" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Utilizes the <cite>neurokit2</cite> library to detect R-peaks in the ECG signal.</p></li>
 <li><p>Highlights detected R-peaks as red dots on the plot for easy visualization.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="heart-rate-calculation">
 <h4>3. Heart Rate Calculation:<a class="headerlink" href="#heart-rate-calculation" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Computes heart rate (in BPM) using the time intervals between consecutive R-peaks.</p></li>
 <li><p>Implements a moving average filter to smooth heart rate values and reduce noise.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="interactive-gui">
 <h4>4. Interactive GUI:<a class="headerlink" href="#interactive-gui" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Built with PyQt5, providing a user-friendly interface with a real-time ECG plot and heart rate display.</p></li>
 <li><p>Allows double-click to reset the plot’s zoom level to default settings.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="signal-filtering">
 <h4>5. Signal Filtering:<a class="headerlink" href="#signal-filtering" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Applies a low-pass Butterworth filter to remove high-frequency noise from the ECG signal.</p></li>
 <li><p>Ensures clean and accurate R-peak detection.</p></li>
 </ul>
-</div></blockquote>
 </section>
 </section>
 <section id="running-the-application">
@@ -844,49 +835,39 @@ If you run the following command:</p>
 <h3>Features<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <section id="real-time-emg-signal-visualization">
 <h4>1. Real-Time EMG Signal Visualization:<a class="headerlink" href="#real-time-emg-signal-visualization" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Connects to an LSL stream to acquire real-time EMG data.</p></li>
 <li><p>Displays the raw EMG signal after applying a high-pass filter (70 Hz cutoff) to remove low-frequency noise.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="emg-envelope-extraction">
 <h4>2. EMG Envelope Extraction:<a class="headerlink" href="#emg-envelope-extraction" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Computes the Root Mean Square (RMS) envelope of the filtered EMG signal using a moving window.</p></li>
 <li><p>Visualizes the EMG envelope alongside the filtered EMG signal for easy comparison.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="interactive-and-responsive-gui">
 <h4>3. Interactive and Responsive GUI:<a class="headerlink" href="#interactive-and-responsive-gui" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Built using <cite>PyQt5</cite> for a modern and intuitive user interface.</p></li>
 <li><p>Features two synchronized plots: one for the filtered EMG signal and one for the EMG envelope.</p></li>
 <li><p>Disables zoom and pan for a clean, fixed-axis visualization.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="customizable-signal-processing">
 <h4>4. Customizable Signal Processing:<a class="headerlink" href="#customizable-signal-processing" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Implements a high-pass Butterworth filter to remove baseline drift and noise.</p></li>
 <li><p>Adjusts the RMS window size dynamically based on the sampling rate (e.g., 25 samples for 250 Hz, 50 samples for 500 Hz).</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="dynamic-plot-updates">
 <h4>5. Dynamic Plot Updates:<a class="headerlink" href="#dynamic-plot-updates" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Updates the plots in real-time using a fixed-size circular buffer for efficient data handling.</p></li>
 <li><p>Refreshes the display every 15 milliseconds for smooth and responsive visualization.</p></li>
 </ul>
-</div></blockquote>
 </section>
 </section>
 <section id="id7">
@@ -910,40 +891,32 @@ If you run the following command:</p>
 <h3>Features<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <section id="real-time-eog-signal-visualization">
 <h4>1. Real-Time EOG Signal Visualization:<a class="headerlink" href="#real-time-eog-signal-visualization" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Displays the filtered EOG signal in real-time using a low-pass filter (10 Hz cutoff).</p></li>
 <li><p>Dynamically updates the plot with a 5-second rolling window for continuous monitoring.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="blink-detection">
 <h4>2. Blink Detection:<a class="headerlink" href="#blink-detection" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Detects blinks by identifying peaks in the filtered EOG signal.</p></li>
 <li><p>Uses a dynamic threshold based on the mean and standard deviation of the signal to distinguish blinks from noise.</p></li>
 <li><p>Implements a minimum time gap (0.1 seconds) between detected blinks to avoid false positives.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="dual-plot-interface">
 <h4>3. Dual-Plot Interface:<a class="headerlink" href="#dual-plot-interface" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>EOG Signal Plot: Displays the filtered EOG signal with detected peaks marked in red.</p></li>
 <li><p>Blink Detection Plot: Shows a binary representation of detected blinks (1 for blink, 0 for no blink).</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="user-friendly-gui">
 <h4>4. User-Friendly GUI:<a class="headerlink" href="#user-friendly-gui" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Built with PyQt5 for a responsive and intuitive interface.</p></li>
 <li><p>Includes features like grid lines, auto-scaling, and zoom disablement for better usability.</p></li>
 </ul>
-</div></blockquote>
 </section>
 </section>
 <section id="id10">
@@ -967,56 +940,56 @@ If you run the following command:</p>
 <h3>Features<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <section id="real-time-eeg-signal-visualization">
 <h4>1. Real-Time EEG Signal Visualization:<a class="headerlink" href="#real-time-eeg-signal-visualization" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Displays raw EEG signals in a real-time scrolling plot.</p></li>
 <li><p>Utilizes a moving window of 500 samples for continuous visualization.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="signal-processing">
 <h4>2. Signal Processing:<a class="headerlink" href="#signal-processing" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Applies a notch filter to remove 50 Hz powerline interference.</p></li>
 <li><p>Uses a bandpass filter (0.5-48 Hz) to isolate relevant EEG frequencies.</p></li>
 <li><p>Implements a Hanning window for FFT computation to reduce spectral leakage.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="fast-fourier-transform-fft">
 <h4>3. Fast Fourier Transform (FFT):<a class="headerlink" href="#fast-fourier-transform-fft" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Computes the FFT of the EEG signal to analyze its frequency components.</p></li>
 <li><p>Visualizes the FFT results in a separate plot, focusing on the 0-50 Hz range.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="brainwave-power-analysis">
 <h4>4. Brainwave Power Analysis:<a class="headerlink" href="#brainwave-power-analysis" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
-<li><p>Calculates the power of five brainwave frequency bands:
-- Delta (0.5-4 Hz)
-- Theta (4-8 Hz)
-- Alpha (8-13 Hz)
-- Beta (13-30 Hz)
-- Gamma (30-45 Hz)</p></li>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Calculates the power of five brainwave frequency bands:</dt><dd><ul>
+<li><p>Delta (0.5-4 Hz)</p></li>
+<li><p>Theta (4-8 Hz)</p></li>
+<li><p>Alpha (8-13 Hz)</p></li>
+<li><p>Beta (13-30 Hz)</p></li>
+<li><p>Gamma (30-45 Hz)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 <li><p>Displays the power of each band in a bar chart for easy comparison.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="id13">
 <h4>5. User-Friendly GUI:<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
-<li><p>Provides a clean and intuitive interface with two main sections:
-- Top Section: Real-time EEG signal plot.
-- Bottom Section: FFT plot and brainwave power bar chart.</p></li>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Provides a clean and intuitive interface with two main sections:</dt><dd><ul>
+<li><p>Top Section: Real-time EEG signal plot.</p></li>
+<li><p>Bottom Section: FFT plot and brainwave power bar chart.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 <li><p>Allows users to monitor EEG data and its frequency components simultaneously.</p></li>
 </ul>
-</div></blockquote>
 </section>
 </section>
 <section id="id14">
@@ -1042,51 +1015,41 @@ If you run the following command:</p>
 <h3>Features<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <section id="real-time-eeg-signal-processing">
 <h4>1. Real-Time EEG Signal Processing:<a class="headerlink" href="#real-time-eeg-signal-processing" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Connects to an LSL stream to acquire real-time EEG data.</p></li>
 <li><p>Computes the power spectral density (PSD) of Alpha (8-13 Hz) and Beta (13-30 Hz) frequency bands using Welch’s method.</p></li>
 <li><p>Calculates the relative power ratio (Beta/Alpha) to determine player force.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="interactive-gameplay">
 <h4>2. Interactive Gameplay:<a class="headerlink" href="#interactive-gameplay" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Two players compete to move a ball to the opponent’s side using their brain activity.</p></li>
 <li><p>The ball’s movement is determined by the net force derived from the players’ EEG signals.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="dynamic-thresholding">
 <h4>3. Dynamic Thresholding:<a class="headerlink" href="#dynamic-thresholding" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Uses a moving average of the last 10 data points to smooth the force calculations.</p></li>
 <li><p>Applies a threshold to prevent small fluctuations from affecting the ball’s movement.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="id17">
 <h4>4. User-Friendly GUI:<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Features a full-screen graphical interface with a central ball and two player paddles.</p></li>
 <li><p>Displays real-time updates of the ball’s position and forces applied by each player.</p></li>
 <li><p>Includes buttons for starting, pausing, resuming, and exiting the game.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="win-condition-and-feedback">
 <h4>5. Win Condition and Feedback:<a class="headerlink" href="#win-condition-and-feedback" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Declares a winner when the ball reaches either side of the screen.</p></li>
 <li><p>Plays a sound effect to celebrate the winner.</p></li>
 <li><p>Automatically pauses the game upon a win and allows for a restart.</p></li>
 </ul>
-</div></blockquote>
 </section>
 </section>
 <section id="id18">
@@ -1111,58 +1074,46 @@ If you run the following command:</p>
 <h3>Features<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <section id="id21">
 <h4>1. Real-Time EEG Signal Processing:<a class="headerlink" href="#id21" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Connects to an LSL stream to acquire real-time EEG data.</p></li>
 <li><p>Implements a notch filter to remove 50 Hz power line interference and a bandpass filter to isolate relevant EEG frequency bands (0.5–48 Hz).</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="focus-level-calculation">
 <h4>2. Focus Level Calculation:<a class="headerlink" href="#focus-level-calculation" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Computes the user’s focus level by analyzing the power spectral density of the EEG signal.</p></li>
 <li><p>Focus level is calculated using the ratio of high-frequency (beta and gamma) to low-frequency (delta, theta, and alpha) power bands.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="calibration-system">
 <h4>3. Calibration System:<a class="headerlink" href="#calibration-system" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Includes a calibration phase to establish a baseline focus level for the user.</p></li>
 <li><p>Dynamically sets a focus threshold based on the user’s EEG data during calibration.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="beetle-movement-control">
 <h4>4. Beetle Movement Control:<a class="headerlink" href="#beetle-movement-control" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Moves the beetle upward when the user’s focus level exceeds the threshold.</p></li>
 <li><p>Moves the beetle downward when the focus level is below the threshold.</p></li>
 <li><p>Implements smooth animation and boundary constraints to ensure the beetle stays within the game window.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="interactive-game-interface">
 <h4>5. Interactive Game Interface:<a class="headerlink" href="#interactive-game-interface" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Features a 2D game environment with a beetle sprite that responds to the user’s focus level.</p></li>
 <li><p>Displays real-time feedback on the beetle’s position and focus level.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="dynamic-animation">
 <h4>6. Dynamic Animation:<a class="headerlink" href="#dynamic-animation" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Uses a sequence of beetle sprites to create smooth animations.</p></li>
 <li><p>Adjusts animation speed based on the game’s frame rate.</p></li>
 </ul>
-</div></blockquote>
 </section>
 </section>
 <section id="id22">
@@ -1188,41 +1139,33 @@ If you run the following command:</p>
 <h3>Features<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
 <section id="lsl-stream-integration">
 <h4>1. LSL Stream Integration:<a class="headerlink" href="#lsl-stream-integration" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Automatically searches for and connects to available LSL streams.</p></li>
 <li><p>Supports dynamic detection of the number of channels in the stream.</p></li>
 <li><p>Displays connection status and channel count in the GUI.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="real-time-data-visualization">
 <h4>2. Real-Time Data Visualization:<a class="headerlink" href="#real-time-data-visualization" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Plots real-time data for each channel in separate graphs.</p></li>
 <li><p>Updates plots at a high frequency for smooth visualization.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="customizable-gui">
 <h4>3. Customizable GUI:<a class="headerlink" href="#customizable-gui" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Built using <cite>PyQt</cite> and <cite>pyqtgraph</cite> for a responsive and interactive interface.</p></li>
 <li><p>Features a clean layout with individual plots for each channel.</p></li>
 <li><p>Includes a status bar to display LSL connection details.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="efficient-data-handling">
 <h4>4. Efficient Data Handling:<a class="headerlink" href="#efficient-data-handling" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Uses a rolling buffer to store the last 2000 samples for each channel.</p></li>
 <li><p>Implements downsampling and clipping to optimize performance and memory usage.</p></li>
 </ul>
-</div></blockquote>
 </section>
 </section>
 <section id="id25">
@@ -1246,41 +1189,33 @@ If you run the following command:</p>
 <h3>Features<a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
 <section id="real-time-eog-signal-processing">
 <h4>1. Real-Time EOG Signal Processing:<a class="headerlink" href="#real-time-eog-signal-processing" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Connects to an LSL stream to acquire real-time EOG data.</p></li>
 <li><p>Implements a low-pass filter to smooth the EOG signal for accurate blink detection.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="id28">
 <h4>2. Blink Detection:<a class="headerlink" href="#id28" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Detects blinks by identifying peaks in the filtered EOG signal.</p></li>
 <li><p>Uses a dynamic threshold based on the mean and standard deviation of the signal to distinguish blinks from noise.</p></li>
 <li><p>Incorporates a refractory period to prevent multiple detections from a single blink.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="keystroke-emulation">
 <h4>3. Keystroke Emulation:<a class="headerlink" href="#keystroke-emulation" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Simulates a spacebar press (<cite>pyautogui.press(‘space’)</cite>) whenever a blink is detected.</p></li>
 <li><p>Provides visual feedback by updating the GUI button color upon blink detection.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="id29">
 <h4>4. User-Friendly GUI:<a class="headerlink" href="#id29" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Features a compact, movable popup window with a clean and intuitive interface.</p></li>
 <li><p>Includes buttons for connecting to the LSL stream, starting/stopping blink detection, and quitting the application.</p></li>
 <li><p>Displays an eye icon to represent the blink detection status.</p></li>
 </ul>
-</div></blockquote>
 </section>
 </section>
 <section id="id30">
@@ -1306,26 +1241,21 @@ If you run the following command:</p>
 <h3>Features<a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
 <section id="load-csv-files">
 <h4>1. Load CSV Files:<a class="headerlink" href="#load-csv-files" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Users can load CSV files containing data with a <cite>Counter</cite> column and multiple channels (e.g., <cite>Channel1</cite>, <cite>Channel2</cite>, etc.).</p></li>
 <li><p>The application automatically detects the header row and skips any metadata above it.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="channel-selection">
 <h4>2. Channel Selection:<a class="headerlink" href="#channel-selection" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>A dropdown menu dynamically populates with available channels (e.g., <cite>Channel1</cite>, <cite>Channel2</cite>, etc.) from the loaded CSV file.</p></li>
 <li><p>Users can select a specific channel to plot.</p></li>
 </ul>
-</div></blockquote>
 </section>
 <section id="interactive-data-visualization">
 <h4>3. Interactive Data Visualization:<a class="headerlink" href="#interactive-data-visualization" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Utilizes <cite>plotly</cite> to generate interactive line plots for the selected channel.</p></li>
 <li><dl class="simple">
 <dt>Plots include advanced features such as:</dt><dd><ul>
@@ -1339,16 +1269,13 @@ If you run the following command:</p>
 </dl>
 </li>
 </ul>
-</div></blockquote>
 </section>
 <section id="user-friendly-interface">
 <h4>4. User-Friendly Interface:<a class="headerlink" href="#user-friendly-interface" title="Link to this heading">#</a></h4>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Simple and intuitive GUI with buttons for loading files and plotting data.</p></li>
 <li><p>Displays the name of the loaded CSV file for easy reference.</p></li>
 </ul>
-</div></blockquote>
 </section>
 </section>
 <section id="id33">
@@ -1361,6 +1288,78 @@ If you run the following command:</p>
 <img alt="CSV Plotter" src="../../../_images/csvplotter.png" />
 </figure>
 </section>
+</section>
+</section>
+<section id="web-interface">
+<h1>Web Interface<a class="headerlink" href="#web-interface" title="Link to this heading">#</a></h1>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/m_ppRxwKojM&amp;t=29s" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="id34">
+<h2>Overview<a class="headerlink" href="#id34" title="Link to this heading">#</a></h2>
+<p>The Chords-Python Web Interface provides a user-friendly way to control and manage the LSL stream, and other applications from a single web Interface.
+It is built using Flask and enables real-time interaction with data acquisition processes.</p>
+<p><strong>Benefit of Using the Web Interface</strong></p>
+<ul class="simple">
+<li><p>All applications can be run simultaneously by just starting the LSL stream once, reducing manual effort.</p></li>
+<li><p>Simplifies the process of managing multiple applications without needing separate terminal windows.</p></li>
+</ul>
+</section>
+<section id="id35">
+<h2>Features<a class="headerlink" href="#id35" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Allows users to start the Lab Streaming Layer (LSL) process to stream biosignals.</p></li>
+<li><p>Displays real-time LSL status and provides error handling.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>Users can start and monitor external applications dynamically.</p></li>
+<li><p>Ensures that applications are not started multiple times.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>The web interface continuously checks and displays the status of running processes.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>Provides an option to stop all running processes and exit the server safely by pressing <strong>Ctrl + C</strong> in the terminal.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="running-the-web-interface">
+<h2>Running the Web Interface<a class="headerlink" href="#running-the-web-interface" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Install Flask and required Python packages if not already installed:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">chords_requirements</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">app_requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Run the Flask server using the following command:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">app</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Open the Web Interface by clicking on the link generated in the terminal.</p></li>
+</ul>
+<figure class="align-center">
+<img alt="Web Interface" src="../../../_images/webinterface.png" />
+</figure>
+<ul class="simple">
+<li><p>Click <strong>“Start LSL”</strong> to begin streaming.The Button turns green showing that the LSL Stream is running.</p></li>
+<li><p>Launch additional applications as needed.</p></li>
+</ul>
+<figure class="align-center">
+<img alt="Web Interface" src="../../../_images/web_interface.png" />
+</figure>
+<ul class="simple">
+<li><p>Press <strong>Ctrl + C</strong> in the terminal to safely stop all running applications.</p></li>
+</ul>
 </section>
 </section>
 
@@ -1540,6 +1539,12 @@ If you run the following command:</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Running the Application</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#web-interface">Web Interface</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-web-interface">Running the Web Interface</a></li>
 </ul>
 </li>
 </ul>
