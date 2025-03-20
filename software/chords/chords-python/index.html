@@ -768,10 +768,15 @@ If you run the following command:</p>
 <p>After installing the dependencies, you can run any of the following applications by executing the corresponding command in a new terminal.</p>
 <p>List of available applications:</p>
 <section id="heart-rate-with-ecg">
-<h2>1. <cite>Heart Rate with ECG</cite>:<a class="headerlink" href="#heart-rate-with-ecg" title="Link to this heading">#</a></h2>
+<h2>1. <cite>Heart Rate with ECG</cite><a class="headerlink" href="#heart-rate-with-ecg" title="Link to this heading">#</a></h2>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" src="https://www.youtube.com/embed/tZud2tc-TGI" style="border: 0; height: 345px; width: 560px">
-</iframe></div><p>The <strong>Heart Rate with ECG</strong> is a real-time application designed to visualize and analyze Electrocardiogram (ECG) data using the Lab Streaming Layer (LSL) protocol. Built with Python and PyQt5, this application provides a graphical interface for monitoring ECG signals, detecting R-peaks (heartbeats), and calculating the heart rate in real time. It leverages signal processing techniques and the <cite>neurokit2</cite> library for accurate R-peak detection and heart rate estimation.</p>
+</iframe></div><section id="id3">
+<h3>Overview<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>The <strong>Heart Rate with ECG</strong> is a real-time application designed to visualize and analyze Electrocardiogram (ECG) data using the Lab Streaming Layer (LSL) protocol. Built with Python and PyQt5, this application provides a graphical interface for monitoring ECG signals, detecting R-peaks (heartbeats), and calculating the heart rate in real time. It leverages signal processing techniques and the <cite>neurokit2</cite> library for accurate R-peak detection and heart rate estimation.</p>
+</section>
+<section id="id4">
+<h3>Features<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Displays real-time ECG signals in a dynamic plot using <cite>pyqtgraph</cite>.</p></li>
@@ -802,6 +807,9 @@ If you run the following command:</p>
 <li><p>Ensures clean and accurate R-peak detection.</p></li>
 </ul>
 </div></blockquote>
+</section>
+<section id="running-the-application">
+<h3>Running the Application<a class="headerlink" href="#running-the-application" title="Link to this heading">#</a></h3>
 <p>To run the Heart Rate with ECG application, execute the following command in a terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">heartbeat_ecg</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
@@ -809,7 +817,16 @@ If you run the following command:</p>
 <figure class="align-center">
 <img alt="Heart Rate with ECG" src="../../../_images/heartbeat_ecg.png" />
 </figure>
+</section>
+</section>
+<section id="emg-with-envelope">
+<h2>2. <cite>EMG with Envelope</cite><a class="headerlink" href="#emg-with-envelope" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3>Overview<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>The <strong>EMG with Envelope</strong> is a Python-based application designed to visualize and analyze Electromyography (EMG) signals in real-time. It connects to an EMG data stream using the Lab Streaming Layer (LSL) protocol, processes the signal to extract the EMG envelope, and displays both the filtered EMG signal and its envelope in a user-friendly graphical interface. Built with <cite>PyQt5</cite> and <cite>pyqtgraph</cite>, the application provides a responsive and interactive visualization tool for researchers, clinicians, or developers working with EMG data.</p>
+</section>
+<section id="id6">
+<h3>Features<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Connects to an LSL stream to acquire real-time EMG data.</p></li>
@@ -841,6 +858,9 @@ If you run the following command:</p>
 <li><p>Refreshes the display every 15 milliseconds for smooth and responsive visualization.</p></li>
 </ul>
 </div></blockquote>
+</section>
+<section id="id7">
+<h3>Running the Application<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>To run the EMG with Envelope, execute the following command in a terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">emgenvelope</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
@@ -849,9 +869,15 @@ If you run the following command:</p>
 <img alt="EMG with Envelope" src="../../../_images/emgenvelope.png" />
 </figure>
 </section>
+</section>
 <section id="eog-with-blinks">
-<h2>3. <cite>EOG with Blinks</cite>:<a class="headerlink" href="#eog-with-blinks" title="Link to this heading">#</a></h2>
+<h2>3. <cite>EOG with Blinks</cite><a class="headerlink" href="#eog-with-blinks" title="Link to this heading">#</a></h2>
+<section id="id8">
+<h3>Overview<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>The <strong>EOG with Blinks</strong> is a Python-based application designed to visualize and detect eye blinks in real-time using Electrooculography (EOG) signals. Built with the PyQt5 framework and PyQtGraph for plotting, the application connects to an LSL (Lab Streaming Layer) stream to acquire EOG data, processes the signal using a low-pass filter, and detects blinks based on dynamic thresholds. The application provides a dual-plot interface to display the filtered EOG signal and detected blinks, making it a useful tool for real-time monitoring and analysis of EOG data.</p>
+</section>
+<section id="id9">
+<h3>Features<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Displays the filtered EOG signal in real-time using a low-pass filter (10 Hz cutoff).</p></li>
@@ -877,6 +903,9 @@ If you run the following command:</p>
 <li><p>Includes features like grid lines, auto-scaling, and zoom disablement for better usability.</p></li>
 </ul>
 </div></blockquote>
+</section>
+<section id="id10">
+<h3>Running the Application<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <p>To run the EOG with Blink Detection, execute the following command in a terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">eog</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
@@ -885,9 +914,15 @@ If you run the following command:</p>
 <img alt="EOG with Blinks" src="../../../_images/eog.png" />
 </figure>
 </section>
+</section>
 <section id="eeg-with-fft">
-<h2>4. <cite>EEG with FFT</cite>:<a class="headerlink" href="#eeg-with-fft" title="Link to this heading">#</a></h2>
+<h2>4. <cite>EEG with FFT</cite><a class="headerlink" href="#eeg-with-fft" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h3>Overview<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p>The <strong>EEG with FFT and Brainwave Power</strong> is a Python-based application designed to visualize and analyze Electroencephalography (EEG) signals in real-time. It connects to an EEG data stream using the Lab Streaming Layer (LSL) protocol, processes the signal to remove noise, and performs Fast Fourier Transform (FFT) to compute the power of different brainwave frequency bands (Delta, Theta, Alpha, Beta, and Gamma). The application provides a graphical user interface (GUI) built with <cite>PyQt5</cite> and <cite>pyqtgraph</cite> for real-time visualization of raw EEG signals, FFT results, and brainwave power distribution.</p>
+</section>
+<section id="id12">
+<h3>Features<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Displays raw EEG signals in a real-time scrolling plot.</p></li>
@@ -926,6 +961,9 @@ If you run the following command:</p>
 <li><p>Allows users to monitor EEG data and its frequency components simultaneously.</p></li>
 </ul>
 </div></blockquote>
+</section>
+<section id="id13">
+<h3>Running the Application<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p>To run the EEG with FFT, execute the following command in a terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">ffteeg</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
@@ -934,11 +972,17 @@ If you run the following command:</p>
 <img alt="EEG with FFT" src="../../../_images/ffteeg.png" />
 </figure>
 </section>
+</section>
 <section id="eeg-tug-of-war-game">
-<h2>5. <cite>EEG Tug of War Game</cite>:<a class="headerlink" href="#eeg-tug-of-war-game" title="Link to this heading">#</a></h2>
+<h2>5. <cite>EEG Tug of War Game</cite><a class="headerlink" href="#eeg-tug-of-war-game" title="Link to this heading">#</a></h2>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" src="https://www.youtube.com/embed/XAhcYg1J_7k" style="border: 0; height: 345px; width: 560px">
-</iframe></div><p>The <strong>EEG Tug of War Game</strong> is a Python-based application that leverages Electroencephalography (EEG) signals to create an interactive two-player game. Players control the movement of a ball on the screen by modulating their brain activity, specifically the Alpha and Beta frequency bands. The game uses the Lab Streaming Layer (LSL) protocol to acquire real-time EEG data, processes the signals to calculate relative power in the Alpha and Beta bands, and translates these into forces that move the ball. The first player to push the ball to the opponent’s side wins the game. The application is built using the <cite>pygame</cite> library for the graphical interface and integrates with <cite>pylsl</cite> for EEG data acquisition.</p>
+</iframe></div><section id="id14">
+<h3>Overview<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<p>The <strong>EEG Tug of War Game</strong> is a Python-based application that leverages Electroencephalography (EEG) signals to create an interactive two-player game. Players control the movement of a ball on the screen by modulating their brain activity, specifically the Alpha and Beta frequency bands. The game uses the Lab Streaming Layer (LSL) protocol to acquire real-time EEG data, processes the signals to calculate relative power in the Alpha and Beta bands, and translates these into forces that move the ball. The first player to push the ball to the opponent’s side wins the game. The application is built using the <cite>pygame</cite> library for the graphical interface and integrates with <cite>pylsl</cite> for EEG data acquisition.</p>
+</section>
+<section id="id15">
+<h3>Features<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Connects to an LSL stream to acquire real-time EEG data.</p></li>
@@ -972,6 +1016,9 @@ If you run the following command:</p>
 <li><p>Automatically pauses the game upon a win and allows for a restart.</p></li>
 </ul>
 </div></blockquote>
+</section>
+<section id="id16">
+<h3>Running the Application<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p>To run the EEG Tug of War, execute the following command in a terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">game</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
@@ -981,9 +1028,15 @@ If you run the following command:</p>
 </figure>
 <p>The link for the Instructrables of this EEG Tug of War Game is [here](<a class="reference external" href="https://www.instructables.com/Play-Tug-of-War-Game-With-Your-Mind-Using-EEG-1/#ible-footer-portal">https://www.instructables.com/Play-Tug-of-War-Game-With-Your-Mind-Using-EEG-1/#ible-footer-portal</a>)</p>
 </section>
+</section>
 <section id="eeg-beetle-game">
-<h2>6. <cite>EEG Beetle Game</cite>:<a class="headerlink" href="#eeg-beetle-game" title="Link to this heading">#</a></h2>
+<h2>6. <cite>EEG Beetle Game</cite><a class="headerlink" href="#eeg-beetle-game" title="Link to this heading">#</a></h2>
+<section id="id17">
+<h3>Overview<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <p>The <strong>EEG Beetle Game</strong> is a Python-based application that uses Electroencephalography (EEG) signals to control a beetle’s movement in a 2D game environment. The game leverages the Lab Streaming Layer (LSL) protocol to acquire real-time EEG data, processes the signal to detect the user’s focus level, and translates it into upward or downward movement of the beetle. The application is built using the <cite>pygame</cite> library for the game interface and integrates signal processing techniques to analyze EEG data in real-time.</p>
+</section>
+<section id="id18">
+<h3>Features<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Connects to an LSL stream to acquire real-time EEG data.</p></li>
@@ -1021,6 +1074,9 @@ If you run the following command:</p>
 <li><p>Adjusts animation speed based on the game’s frame rate.</p></li>
 </ul>
 </div></blockquote>
+</section>
+<section id="id19">
+<h3>Running the Application<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <p>To run the EEG Beetle Game, execute the following command in a terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">beetle</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
@@ -1029,11 +1085,17 @@ If you run the following command:</p>
 <img alt="EEG Beetle Game" src="../../../_images/beetle.png" />
 </figure>
 </section>
+</section>
 <section id="gui">
-<h2>7. <cite>GUI</cite>:<a class="headerlink" href="#gui" title="Link to this heading">#</a></h2>
+<h2>7. <cite>GUI</cite><a class="headerlink" href="#gui" title="Link to this heading">#</a></h2>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" src="https://www.youtube.com/embed/BseTIdoimws" style="border: 0; height: 345px; width: 560px">
-</iframe></div><p>The <strong>GUI</strong> application is a Python-based tool designed to visualize real-time data streams from an Arduino device using the Lab Streaming Layer (LSL) protocol. The application connects to an LSL stream, retrieves multi-channel data, and plots it in real-time using the <cite>pyqtgraph</cite> library.</p>
+</iframe></div><section id="id20">
+<h3>Overview<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<p>The <strong>GUI</strong> application is a Python-based tool designed to visualize real-time data streams from an Arduino device using the Lab Streaming Layer (LSL) protocol. The application connects to an LSL stream, retrieves multi-channel data, and plots it in real-time using the <cite>pyqtgraph</cite> library.</p>
+</section>
+<section id="id21">
+<h3>Features<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Automatically searches for and connects to available LSL streams.</p></li>
@@ -1060,6 +1122,9 @@ If you run the following command:</p>
 <li><p>Implements downsampling and clipping to optimize performance and memory usage.</p></li>
 </ul>
 </div></blockquote>
+</section>
+<section id="id22">
+<h3>Running the Application<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <p>To run the GUI Visualization, execute the following command in a terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">gui</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
@@ -1068,9 +1133,15 @@ If you run the following command:</p>
 <img alt="GUI" src="../../../_images/gui.jpg" />
 </figure>
 </section>
+</section>
 <section id="eog-keystroke-emulator">
-<h2>8. <cite>EOG Keystroke Emulator</cite>:<a class="headerlink" href="#eog-keystroke-emulator" title="Link to this heading">#</a></h2>
+<h2>8. <cite>EOG Keystroke Emulator</cite><a class="headerlink" href="#eog-keystroke-emulator" title="Link to this heading">#</a></h2>
+<section id="id23">
+<h3>Overview<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
 <p>The <strong>EOG Keystroke Emulator</strong> is a Python-based application designed to detect eye blinks using Electrooculography (EOG) signals and translate them into keystrokes. The application leverages the Lab Streaming Layer (LSL) protocol to acquire real-time EOG data, processes the signal to detect blinks, and simulates a spacebar press whenever a blink is detected. The application is built using the <cite>tkinter</cite> library for the graphical user interface (GUI) and integrates with <cite>pyautogui</cite> for keystroke emulation.</p>
+</section>
+<section id="id24">
+<h3>Features<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Connects to an LSL stream to acquire real-time EOG data.</p></li>
@@ -1097,6 +1168,9 @@ If you run the following command:</p>
 <li><p>Displays an eye icon to represent the blink detection status.</p></li>
 </ul>
 </div></blockquote>
+</section>
+<section id="id25">
+<h3>Running the Application<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
 <p>To run the EOG Keystroke Emulator, execute the following command in a terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">keystroke</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
@@ -1105,11 +1179,17 @@ If you run the following command:</p>
 <img alt="Keystroke" src="../../../_images/keystroke.png" />
 </figure>
 </section>
+</section>
 <section id="csv-plotter">
-<h2>9. <cite>CSV Plotter</cite>:<a class="headerlink" href="#csv-plotter" title="Link to this heading">#</a></h2>
+<h2>9. <cite>CSV Plotter</cite><a class="headerlink" href="#csv-plotter" title="Link to this heading">#</a></h2>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" src="https://www.youtube.com/embed/wMnCOprRpZo" style="border: 0; height: 345px; width: 560px">
-</iframe></div><p>The <strong>CSV Plotter</strong> is a Python-based application designed to visualize data from CSV files. Built using the <cite>tkinter</cite> library for the graphical user interface (GUI) and <cite>plotly</cite> for data visualization, this tool allows users to load CSV files, select specific data channels, and generate interactive line plots.</p>
+</iframe></div><section id="id26">
+<h3>Overview<a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
+<p>The <strong>CSV Plotter</strong> is a Python-based application designed to visualize data from CSV files. Built using the <cite>tkinter</cite> library for the graphical user interface (GUI) and <cite>plotly</cite> for data visualization, this tool allows users to load CSV files, select specific data channels, and generate interactive line plots.</p>
+</section>
+<section id="id27">
+<h3>Features<a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Users can load CSV files containing data with a <cite>Counter</cite> column and multiple channels (e.g., <cite>Channel1</cite>, <cite>Channel2</cite>, etc.).</p></li>
@@ -1144,6 +1224,9 @@ If you run the following command:</p>
 <li><p>Displays the name of the loaded CSV file for easy reference.</p></li>
 </ul>
 </div></blockquote>
+</section>
+<section id="id28">
+<h3>Running the Application<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <p>To run the CSV Plotter, execute the following command in a terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">csvplotter</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
@@ -1151,6 +1234,7 @@ If you run the following command:</p>
 <figure class="align-center">
 <img alt="CSV Plotter" src="../../../_images/csvplotter.png" />
 </figure>
+</section>
 </section>
 </section>
 
@@ -1216,14 +1300,60 @@ If you run the following command:</p>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications:</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heart-rate-with-ecg">1. <cite>Heart Rate with ECG</cite>:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eog-with-blinks">3. <cite>EOG with Blinks</cite>:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-with-fft">4. <cite>EEG with FFT</cite>:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-tug-of-war-game">5. <cite>EEG Tug of War Game</cite>:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-beetle-game">6. <cite>EEG Beetle Game</cite>:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">7. <cite>GUI</cite>:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eog-keystroke-emulator">8. <cite>EOG Keystroke Emulator</cite>:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-plotter">9. <cite>CSV Plotter</cite>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heart-rate-with-ecg">1. <cite>Heart Rate with ECG</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-application">Running the Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emg-with-envelope">2. <cite>EMG with Envelope</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Running the Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eog-with-blinks">3. <cite>EOG with Blinks</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Running the Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-with-fft">4. <cite>EEG with FFT</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Running the Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-tug-of-war-game">5. <cite>EEG Tug of War Game</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Running the Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-beetle-game">6. <cite>EEG Beetle Game</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Running the Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">7. <cite>GUI</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Running the Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eog-keystroke-emulator">8. <cite>EOG Keystroke Emulator</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Running the Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-plotter">9. <cite>CSV Plotter</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Running the Application</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
