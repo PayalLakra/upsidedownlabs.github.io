@@ -638,6 +638,38 @@
 </section>
 <section id="features">
 <h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table" id="id36">
+<caption><span class="caption-text">Available Options</span><a class="headerlink" href="#id36" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Automatic Arduino Detection</p></td>
+<td><p>Automatically scans and detects connected Arduino devices, streamlining setup by eliminating manual port configuration. Ensures quick, user-friendly selection of the correct device.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data Reading</p></td>
+<td><p>Reads data packets from the Arduino in real-time, efficiently processing them to ensure no data loss and accurate signal representation for analysis or visualization.</p></td>
+</tr>
+<tr class="row-even"><td><p>CSV Logging</p></td>
+<td><p>Optionally logs incoming data to a CSV file with columns for Counter and up to 6-Channel data, enabling easy storage for analysis or sharing.</p></td>
+</tr>
+<tr class="row-odd"><td><p>LSL Streaming</p></td>
+<td><p>Streams data via Lab Streaming Layer (LSL), a protocol for time-synchronized data sharing. Enables real-time analysis, visualization, or integration with platforms like BrainVision LSL Viewer.</p></td>
+</tr>
+<tr class="row-even"><td><p>Verbose Output</p></td>
+<td><p>Provides detailed output, including real-time statistics and error reporting. Tracks sampling rate, signal drift, and other key metrics to ensure smooth data acquisition.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Inverted Signal</p></td>
+<td><p>Allows users to invert the signal in software to correct electrode placement issues without needing physical adjustments, ensuring seamless experimentation.</p></td>
+</tr>
+<tr class="row-even"><td><p>Timer</p></td>
+<td><p>Enables time-based recording, automatically stopping after a user-defined duration in seconds. Ideal for experiments requiring specific data intervals, simplifying automated data collection.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <section id="software-requirements">
 <h3>Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -732,6 +764,43 @@ Go to tools, select your board, and the correct COM port. Now, hit the upload bu
 <p>Replace <cite>[options]</cite> with any specific flags you want to use.</p>
 </div>
 <p>Options available are:</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id37">
+<caption><span class="caption-text">Available Options</span><a class="headerlink" href="#id37" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Option</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-p,
+–port</p></td>
+<td><p>Specify the serial port to use (e.g., COM5, /dev/ttyUSB0).
+(By default, it automatically detects the port.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-b,
+–baudrate</p></td>
+<td><p>Set the baud rate for serial communication.
+(By default, the script first attempts to use 230400, and if that fails,
+it automatically falls back to 115200.)</p></td>
+</tr>
+<tr class="row-even"><td><p>–csv</p></td>
+<td><p>Enable CSV logging. Data will be saved to a timestamped file.</p></td>
+</tr>
+<tr class="row-odd"><td><p>–lsl</p></td>
+<td><p>Enable LSL streaming. Sends data to an LSL outlet.</p></td>
+</tr>
+<tr class="row-even"><td><p>-v, –verbose</p></td>
+<td><p>Enable verbose output with detailed statistics and error reporting.</p></td>
+</tr>
+<tr class="row-odd"><td><p>–inverted</p></td>
+<td><p>Invert the signal before streaming LSL and logging.</p></td>
+</tr>
+<tr class="row-even"><td><p>-t</p></td>
+<td><p>Enable the timer to run the program for a set time in seconds.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Example</strong>:
 If you run the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">chords</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">lsl</span> <span class="o">-</span><span class="n">v</span> <span class="o">--</span><span class="n">csv</span> <span class="o">-</span><span class="n">t</span> <span class="mi">60</span>
@@ -742,11 +811,14 @@ If you run the following command:</p>
 </section>
 </section>
 <section id="applications">
-<h1>Applications:<a class="headerlink" href="#applications" title="Link to this heading">#</a></h1>
+<h1>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h1>
 <p>There are many applications available that stream the LSL and can be run for various purposes. Open another terminal and run any application. Ensure the LSL stream is running first.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Before running any application, install all the dependencies required for running the application. Run the following command in a new terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">app_requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
+</div>
 </div>
 <p>After installing the dependencies, you can run any of the following applications by executing the corresponding command in a new terminal.</p>
 <p>List of available applications:</p>
@@ -1278,36 +1350,53 @@ If you run the following command:</p>
 <h1>Web Interface<a class="headerlink" href="#web-interface" title="Link to this heading">#</a></h1>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" src="https://www.youtube.com/embed/m_ppRxwKojM" style="border: 0; height: 345px; width: 560px">
-</iframe></div><p>The Chords-Python Web Interface provides a user-friendly way to control and manage the LSL stream, and other applications from a single web Interface.
+</iframe></div><section id="id34">
+<h2>Overview<a class="headerlink" href="#id34" title="Link to this heading">#</a></h2>
+<p>The Chords-Python Web Interface provides a user-friendly way to control and manage the LSL stream, and other applications from a single web Interface.
 It is built using Flask and enables real-time interaction with data acquisition processes.</p>
 <p><strong>Benefit of Using the Web Interface</strong></p>
 <ul class="simple">
 <li><p>All applications can be run simultaneously by just starting the LSL stream once, reducing manual effort.</p></li>
 <li><p>Simplifies the process of managing multiple applications without needing separate terminal windows.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>To save the data in CSV files, first run the LSL Stream in a terminal, then launch any applications in a separate terminal (as explained above). Ignore the web interface option in this case.</p>
-<blockquote>
-<div><ul class="simple">
+</div>
+</section>
+<section id="id35">
+<h2>Features<a class="headerlink" href="#id35" title="Link to this heading">#</a></h2>
+<section id="start-lsl-stream">
+<h3>1. Start LSL Stream:<a class="headerlink" href="#start-lsl-stream" title="Link to this heading">#</a></h3>
+<ul class="simple">
 <li><p>Allows users to start the Lab Streaming Layer (LSL) process to stream biosignals.</p></li>
 <li><p>Displays real-time LSL status and provides error handling.</p></li>
 </ul>
-</div></blockquote>
-<blockquote>
-<div><ul class="simple">
+</section>
+<section id="launch-additional-applications">
+<h3>2. Launch Additional Applications:<a class="headerlink" href="#launch-additional-applications" title="Link to this heading">#</a></h3>
+<ul class="simple">
 <li><p>Users can start and monitor external applications dynamically.</p></li>
 <li><p>Ensures that applications are not started multiple times.</p></li>
 </ul>
-</div></blockquote>
-<blockquote>
-<div><ul class="simple">
+</section>
+<section id="real-time-application-status">
+<h3>3. Real-time Application Status:<a class="headerlink" href="#real-time-application-status" title="Link to this heading">#</a></h3>
+<ul class="simple">
 <li><p>The web interface continuously checks and displays the status of running processes.</p></li>
 </ul>
-</div></blockquote>
-<blockquote>
-<div><ul class="simple">
+</section>
+<section id="graceful-shutdown">
+<h3>4. Graceful Shutdown:<a class="headerlink" href="#graceful-shutdown" title="Link to this heading">#</a></h3>
+<ul class="simple">
 <li><p>Provides an option to stop all running processes and exit the server safely by pressing <strong>Ctrl + C</strong> in the terminal.</p></li>
 </ul>
-</div></blockquote>
+</section>
+</section>
+<section id="running-the-web-interface">
+<h2>Running the Web Interface<a class="headerlink" href="#running-the-web-interface" title="Link to this heading">#</a></h2>
+<section id="ensure-dependencies-are-installed">
+<h3>1. Ensure dependencies are installed<a class="headerlink" href="#ensure-dependencies-are-installed" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Install all required dependencies:</p></li>
 </ul>
@@ -1317,18 +1406,27 @@ It is built using Flask and enables real-time interaction with data acquisition 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">app_requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
+</section>
+<section id="start-the-web-interface">
+<h3>2. Start the Web Interface<a class="headerlink" href="#start-the-web-interface" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Run the Flask server using the following command:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">app</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+</section>
+<section id="access-the-interface">
+<h3>3. Access the Interface<a class="headerlink" href="#access-the-interface" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Open the Web Interface by clicking on the link generated in the terminal.</p></li>
 </ul>
 <figure class="align-center">
 <img alt="Web Interface" src="../../../_images/webinterface.png" />
 </figure>
+</section>
+<section id="start-lsl-and-other-applications">
+<h3>4. Start LSL and Other Applications<a class="headerlink" href="#start-lsl-and-other-applications" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Click <strong>Start LSL</strong> to begin streaming.The Button turns green showing that the LSL Stream is running.</p></li>
 <li><p>Launch additional applications as needed.</p></li>
@@ -1336,9 +1434,14 @@ It is built using Flask and enables real-time interaction with data acquisition 
 <figure class="align-center">
 <img alt="Web Interface" src="../../../_images/web_interface.png" />
 </figure>
+</section>
+<section id="stop-all-processes">
+<h3>5. Stop All Processes<a class="headerlink" href="#stop-all-processes" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Press <strong>Ctrl + C</strong> in the terminal to safely stop all running applications.</p></li>
 </ul>
+</section>
+</section>
 </section>
 
 
@@ -1400,7 +1503,7 @@ It is built using Flask and enables real-time interaction with data acquisition 
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications:</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecg-with-heart-rate">1. <cite>ECG with Heart Rate</cite></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Overview</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Features</a><ul class="nav section-nav flex-column">
@@ -1516,7 +1619,25 @@ It is built using Flask and enables real-time interaction with data acquisition 
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#web-interface">Web Interface</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#web-interface">Web Interface</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">Features</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-lsl-stream">1. Start LSL Stream:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-additional-applications">2. Launch Additional Applications:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-application-status">3. Real-time Application Status:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graceful-shutdown">4. Graceful Shutdown:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-web-interface">Running the Web Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensure-dependencies-are-installed">1. Ensure dependencies are installed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-the-web-interface">2. Start the Web Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-the-interface">3. Access the Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-lsl-and-other-applications">4. Start LSL and Other Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stop-all-processes">5. Stop All Processes</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
   </nav></div>
