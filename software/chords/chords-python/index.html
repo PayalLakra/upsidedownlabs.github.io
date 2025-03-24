@@ -57,7 +57,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Mar 20, 2025"/>
+    <meta name="docbuild:last-update" content="Mar 24, 2025"/>
   </head>
   
   
@@ -634,19 +634,10 @@
 <iframe allowfullscreen="true" src="https://www.youtube.com/embed/bj7exKRsuZ8" style="border: 0; height: 345px; width: 560px">
 </iframe></div><section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
-<p>Chords Python script is designed to interface with an Arduino-based bio-potential amplifier, read data from it, optionally log this data to CSV or stream it via the Lab Streaming Layer (LSL).</p>
+<p>Chords-Python is an open-source bag of tools for recording biopotential signals like <strong>ECG</strong>, <strong>EMG</strong>, <strong>EEG</strong>, or <strong>EOG</strong>, along with visualization using BioAmp hardware. It’s ideal for educational purposes as it promotes DIY Neuroscience and makes biopotential signal exploration more accessible for students and researchers.</p>
 </section>
 <section id="features">
 <h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Automatic Arduino Detection</strong>: The tool automatically scans and detects connected Arduino devices, streamlining setup by eliminating manual port configuration. This ensures quick and user-friendly selection of the correct device for data acquisition.</p></li>
-<li><p><strong>Data Reading</strong>: The system reads data packets from the Arduino in real-time, efficiently processing them to ensure no data loss and accurate signal representation for analysis or visualization.</p></li>
-<li><p><strong>CSV Logging</strong>: An optional feature logs incoming data to a CSV file with columns for Counter and upto 6-Channel data, enabling easy storage for analysis or sharing.</p></li>
-<li><p><strong>LSL Streaming</strong>: The tool streams data via Lab Streaming Layer (LSL), a protocol for time-synchronized data sharing, enabling real-time analysis, visualization, or integration with platforms like BrainVision LSL Viewer.</p></li>
-<li><p><strong>Verbose Output</strong>: This feature provides detailed output, including real-time statistics and error reporting. It tracks the sampling rate, signal drift, and other key metrics to ensure the data acquisition process is smooth.</p></li>
-<li><p><strong>Inverted Signal</strong>: Users can invert the signal in software to correct electrode placement issues without needing physical adjustments, ensuring seamless experimentation.</p></li>
-<li><p><strong>Timer</strong>: This feature enables time-based recording, automatically stopping after a user-defined duration in seconds. Ideal for experiments requiring specific data intervals, it simplifies automated data collection.</p></li>
-</ul>
 <section id="software-requirements">
 <h3>Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -663,18 +654,19 @@
 <li><p>A USB cable (type depends on the board)</p></li>
 <li><p><a class="reference external" href="https://docs.upsidedownlabs.tech/hardware/index.html">BioAmp Hardware</a> and its accessories</p></li>
 </ul>
+</section>
 <section id="setting-up-the-hardware">
-<h4>Setting up the hardware:<a class="headerlink" href="#setting-up-the-hardware" title="Link to this heading">#</a></h4>
-<p>Make all the connections according to the <a class="reference external" href="https://docs.upsidedownlabs.tech/hardware/index.html">hardware you are using</a> , including sensor connections with the development board, body connections with the sensor, and connections from the development board to your laptop.[Link]</p>
+<h3>Setting up the hardware<a class="headerlink" href="#setting-up-the-hardware" title="Link to this heading">#</a></h3>
+<p>Make all the connections according to the <a class="reference external" href="https://docs.upsidedownlabs.tech/hardware/index.html">hardware you are using</a> , including sensor connections with the development board, body connections with the sensor, and connections from the development board to your laptop.</p>
 </section>
 <section id="uploading-the-code">
-<h4>Uploading the code:<a class="headerlink" href="#uploading-the-code" title="Link to this heading">#</a></h4>
-<p>Once you are all set, it is time to upload the code to your development board. Go to <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Chords Arduino Firmware</a>. GitHub repo, scroll down to the supported boards table, find your board name, and click on the Arduino sketch corresponding to that row.</p>
-<p>Copy the sketch and paste it into Arduino IDE.</p>
-<p>Go to tools, select your board, and the correct COM port. Now, hit the upload button.</p>
+<h3>Uploading the code<a class="headerlink" href="#uploading-the-code" title="Link to this heading">#</a></h3>
+<p>Once you are all set, it is time to upload the code to your development board. Go to <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Chords Arduino Firmware</a> GitHub repo, scroll down to the supported boards table, find your board name, and click on the Arduino sketch corresponding to that row.
+Copy the sketch and paste it into Arduino IDE.
+Go to tools, select your board, and the correct COM port. Now, hit the upload button.</p>
 </section>
 <section id="opening-chords-python">
-<h4>Opening Chords-Python:<a class="headerlink" href="#opening-chords-python" title="Link to this heading">#</a></h4>
+<h3>Opening Chords-Python<a class="headerlink" href="#opening-chords-python" title="Link to this heading">#</a></h3>
 <p>Follow these steps to set up and install Chords-Python:</p>
 <ol class="arabic">
 <li><p>Ensure you have latest version of Python installed.</p></li>
@@ -740,16 +732,7 @@
 <p>Replace <cite>[options]</cite> with any specific flags you want to use.</p>
 </div>
 <p>Options available are:</p>
-<ul class="simple">
-<li><p><strong>-p, –port</strong>: Specify the serial port to use (e.g., COM5, /dev/ttyUSB0).(By default it automatically detects the port.)</p></li>
-<li><p><strong>-b, –baudrate</strong> : Set the baud rate for serial communication (By default the script will first attempt to use 230400, and if that fails, it will automatically fallback to 115200.)</p></li>
-<li><p><strong>–csv</strong>: Enable CSV logging. Data will be saved to a timestamped file.</p></li>
-<li><p><strong>–lsl</strong>: Enable LSL streaming. Sends data to an LSL outlet.</p></li>
-<li><p><strong>-v, –verbose</strong>: Enable verbose output with detailed statistics and error reporting.</p></li>
-<li><p><strong>–inverted</strong>: Invert the signal before streaming LSL and logging.</p></li>
-<li><p><strong>-t</strong> : Enable the timer to run program for a set time in seconds.</p></li>
-</ul>
-<p>Example:
+<p><strong>Example</strong>:
 If you run the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">chords</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">lsl</span> <span class="o">-</span><span class="n">v</span> <span class="o">--</span><span class="n">csv</span> <span class="o">-</span><span class="n">t</span> <span class="mi">60</span>
 </pre></div>
@@ -758,23 +741,22 @@ If you run the following command:</p>
 </section>
 </section>
 </section>
-</section>
 <section id="applications">
 <h1>Applications:<a class="headerlink" href="#applications" title="Link to this heading">#</a></h1>
-<p>Open another terminal and run any application. Ensure the LSL Stream is running first.</p>
-<p>Before running any application, install all the dependencies required. Run the following command in a new terminal:</p>
+<p>There are many applications available that stream the LSL and can be run for various purposes. Open another terminal and run any application. Ensure the LSL stream is running first.</p>
+<p>Before running any application, install all the dependencies required for running the application. Run the following command in a new terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">app_requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <p>After installing the dependencies, you can run any of the following applications by executing the corresponding command in a new terminal.</p>
 <p>List of available applications:</p>
-<section id="heart-rate-with-ecg">
-<h2>1. <cite>Heart Rate with ECG</cite><a class="headerlink" href="#heart-rate-with-ecg" title="Link to this heading">#</a></h2>
+<section id="ecg-with-heart-rate">
+<h2>1. <cite>ECG with Heart Rate</cite><a class="headerlink" href="#ecg-with-heart-rate" title="Link to this heading">#</a></h2>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" src="https://www.youtube.com/embed/tZud2tc-TGI" style="border: 0; height: 345px; width: 560px">
 </iframe></div><section id="id3">
 <h3>Overview<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
-<p>The <strong>Heart Rate with ECG</strong> is a real-time application designed to visualize and analyze Electrocardiogram (ECG) data using the Lab Streaming Layer (LSL) protocol. Built with Python and PyQt5, this application provides a graphical interface for monitoring ECG signals, detecting R-peaks (heartbeats), and calculating the heart rate in real time. It leverages signal processing techniques and the <cite>neurokit2</cite> library for accurate R-peak detection and heart rate estimation.</p>
+<p>The <strong>ECG with Heart Rate</strong> is a real-time application designed to visualize and analyze Electrocardiogram (ECG) data using the Lab Streaming Layer (LSL) protocol. Built with Python and PyQt5, this application provides a graphical interface for monitoring ECG signals, detecting R-peaks (heartbeats), and calculating the heart rate in real time. It applies signal processing techniques and utilizes the <cite>neurokit2</cite> library to estimate R-peak detection and heart rate.</p>
 </section>
 <section id="id4">
 <h3>Features<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
@@ -810,16 +792,17 @@ If you run the following command:</p>
 <h4>5. Signal Filtering:<a class="headerlink" href="#signal-filtering" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Applies a low-pass Butterworth filter to remove high-frequency noise from the ECG signal.</p></li>
-<li><p>Ensures clean and accurate R-peak detection.</p></li>
+<li><p>Helps in enhancing signal clarity, which can assist in identifying R-peaks.</p></li>
 </ul>
 </section>
 </section>
 <section id="running-the-application">
 <h3>Running the Application<a class="headerlink" href="#running-the-application" title="Link to this heading">#</a></h3>
-<p>To run the Heart Rate with ECG application, execute the following command in a terminal:</p>
+<p>To run the ECG with Heart Rate application, execute the following command in a terminal:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">heartbeat_ecg</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+<p>A GUI window will appear, displaying the real-time ECG signal along with the calculated heart rate.</p>
 <figure class="align-center">
 <img alt="Heart Rate with ECG" src="../../../_images/heartbeat_ecg.png" />
 </figure>
@@ -829,7 +812,7 @@ If you run the following command:</p>
 <h2>2. <cite>EMG with Envelope</cite><a class="headerlink" href="#emg-with-envelope" title="Link to this heading">#</a></h2>
 <section id="id5">
 <h3>Overview<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
-<p>The <strong>EMG with Envelope</strong> is a Python-based application designed to visualize and analyze Electromyography (EMG) signals in real-time. It connects to an EMG data stream using the Lab Streaming Layer (LSL) protocol, processes the signal to extract the EMG envelope, and displays both the filtered EMG signal and its envelope in a user-friendly graphical interface. Built with <cite>PyQt5</cite> and <cite>pyqtgraph</cite>, the application provides a responsive and interactive visualization tool for researchers, clinicians, or developers working with EMG data.</p>
+<p>The <strong>EMG with Envelope</strong> is a Python-based application designed to visualize and analyze Electromyography (EMG) signals in real-time. It connects to an EMG data stream using the Lab Streaming Layer (LSL) protocol, processes the signal to extract the EMG envelope, and displays both the filtered EMG signal and its envelope in a user-friendly graphical interface. Built with <cite>PyQt5</cite> and <cite>pyqtgraph</cite>, the application provides a responsive and interactive visualization tool for students, researchers, or developers working with EMG data.</p>
 </section>
 <section id="id6">
 <h3>Features<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
@@ -837,14 +820,14 @@ If you run the following command:</p>
 <h4>1. Real-Time EMG Signal Visualization:<a class="headerlink" href="#real-time-emg-signal-visualization" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Connects to an LSL stream to acquire real-time EMG data.</p></li>
-<li><p>Displays the raw EMG signal after applying a high-pass filter (70 Hz cutoff) to remove low-frequency noise.</p></li>
+<li><p>Displays the EMG signal after applying a high-pass filter (70 Hz cutoff) to remove low-frequency noise.</p></li>
 </ul>
 </section>
 <section id="emg-envelope-extraction">
 <h4>2. EMG Envelope Extraction:<a class="headerlink" href="#emg-envelope-extraction" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Computes the Root Mean Square (RMS) envelope of the filtered EMG signal using a moving window.</p></li>
-<li><p>Visualizes the EMG envelope alongside the filtered EMG signal for easy comparison.</p></li>
+<li><p>Applies convolution with a uniform window and pads the result to align with the original signal length.</p></li>
 </ul>
 </section>
 <section id="interactive-and-responsive-gui">
@@ -876,6 +859,7 @@ If you run the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">emgenvelope</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+<p>A GUI window will appear, displaying the real-time EMG signal along with the calculated EMG Envelope.</p>
 <figure class="align-center">
 <img alt="EMG with Envelope" src="../../../_images/emgenvelope.png" />
 </figure>
@@ -925,6 +909,7 @@ If you run the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">eog</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+<p>A GUI window will appear, displaying the real-time EOG signal along with the Blinks marked as Red dot.</p>
 <figure class="align-center">
 <img alt="EOG with Blinks" src="../../../_images/eog.png" />
 </figure>
@@ -998,6 +983,7 @@ If you run the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">ffteeg</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+<p>A GUI window will appear, displaying the real-time EEG signal along with the calculated FFT and Brainwave power distribution.</p>
 <figure class="align-center">
 <img alt="EEG with FFT" src="../../../_images/ffteeg.png" />
 </figure>
@@ -1009,7 +995,7 @@ If you run the following command:</p>
 <iframe allowfullscreen="true" src="https://www.youtube.com/embed/XAhcYg1J_7k" style="border: 0; height: 345px; width: 560px">
 </iframe></div><section id="id15">
 <h3>Overview<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
-<p>The <strong>EEG Tug of War Game</strong> is a Python-based application that leverages Electroencephalography (EEG) signals to create an interactive two-player game. Players control the movement of a ball on the screen by modulating their brain activity, specifically the Alpha and Beta frequency bands. The game uses the Lab Streaming Layer (LSL) protocol to acquire real-time EEG data, processes the signals to calculate relative power in the Alpha and Beta bands, and translates these into forces that move the ball. The first player to push the ball to the opponent’s side wins the game. The application is built using the <cite>pygame</cite> library for the graphical interface and integrates with <cite>pylsl</cite> for EEG data acquisition.</p>
+<p>The <strong>EEG Tug of War Game</strong> is a Python-based application that leverages Electroencephalography (EEG) signals to create an interactive two-player game. Players control the movement of a ball on the screen by modulating their brain activity, specifically the Alpha and Beta frequency bands. The game uses the Lab Streaming Layer (LSL) protocol to acquire real-time EEG data, processes the signals to calculate relative power in the Alpha and Beta bands, and translates these into forces that move the ball. The first player aims to push the ball onto the opponent’s side to score and win the game. The application is built using the <cite>pygame</cite> library for the graphical interface and integrates with <cite>pylsl</cite> for EEG data acquisition.</p>
 </section>
 <section id="id16">
 <h3>Features<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
@@ -1058,10 +1044,11 @@ If you run the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">game</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+<p>The game window will open, featuring buttons for <strong>START/RESTART</strong>, <strong>PLAY/PAUSE</strong>, and <strong>EXIT</strong>. These buttons offer intuitive control, allowing players to easily start, pause, resume, or exit the game as needed.</p>
 <figure class="align-center">
 <img alt="EEG Tug of War" src="../../../_images/game.png" />
 </figure>
-<p>The link for the Instructrables of this EEG Tug of War Game is [here](<a class="reference external" href="https://www.instructables.com/Play-Tug-of-War-Game-With-Your-Mind-Using-EEG-1/#ible-footer-portal">https://www.instructables.com/Play-Tug-of-War-Game-With-Your-Mind-Using-EEG-1/#ible-footer-portal</a>)</p>
+<p>For detailed instructions, check out the <a class="reference external" href="https://www.instructables.com/Play-Tug-of-War-Game-With-Your-Mind-Using-EEG-1/#ible-footer-portal">EEG Tig of War Game</a> Instructable.</p>
 </section>
 </section>
 <section id="eeg-beetle-game">
@@ -1122,6 +1109,7 @@ If you run the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">beetle</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+<p>A GUI window will appear, showing all calibration messages, followed by the game starting, and finally displaying the game with the beetle.</p>
 <figure class="align-center">
 <img alt="EEG Beetle Game" src="../../../_images/beetle.png" />
 </figure>
@@ -1160,13 +1148,6 @@ If you run the following command:</p>
 <li><p>Includes a status bar to display LSL connection details.</p></li>
 </ul>
 </section>
-<section id="efficient-data-handling">
-<h4>4. Efficient Data Handling:<a class="headerlink" href="#efficient-data-handling" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p>Uses a rolling buffer to store the last 2000 samples for each channel.</p></li>
-<li><p>Implements downsampling and clipping to optimize performance and memory usage.</p></li>
-</ul>
-</section>
 </section>
 <section id="id25">
 <h3>Running the Application<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
@@ -1174,6 +1155,7 @@ If you run the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">gui</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+<p>A GUI window will appear that shows the data in real-time.</p>
 <figure class="align-center">
 <img alt="GUI" src="../../../_images/gui.jpg" />
 </figure>
@@ -1224,6 +1206,7 @@ If you run the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">keystroke</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+<p>A small window appears in the corner, displaying a <em>Connect</em> button. Once connected, a <em>Start</em> button becomes visible. Pressing the <em>Start</em> button initiates blink detection, and each detected blink triggers a spacebar key press.</p>
 <figure class="align-center">
 <img alt="Keystroke" src="../../../_images/keystroke.png" />
 </figure>
@@ -1259,11 +1242,11 @@ If you run the following command:</p>
 <li><p>Utilizes <cite>plotly</cite> to generate interactive line plots for the selected channel.</p></li>
 <li><dl class="simple">
 <dt>Plots include advanced features such as:</dt><dd><ul>
-<li><p>Zoom: Zoom in to inspect specific data ranges.</p></li>
-<li><p>Pan: Move across the plot to explore different sections.</p></li>
-<li><p>Autoscale: Automatically adjust the plot scale to fit the data.</p></li>
-<li><p>Download Plot as PNG: Save the generated plot as a high-quality PNG image.</p></li>
-<li><p>Hover-to-View Data Points: Hover over the plot to view precise data values.</p></li>
+<li><p><em>Zoom</em>: Zoom in to inspect specific data ranges.</p></li>
+<li><p><em>Pan</em>: Move across the plot to explore different sections.</p></li>
+<li><p><em>Autoscale</em>: Automatically adjust the plot scale to fit the data.</p></li>
+<li><p><em>Download Plot as PNG</em>: Save the generated plot as a high-quality PNG image.</p></li>
+<li><p><em>Hover-to-View Data Points</em>: Hover over the plot to view precise data values.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1284,6 +1267,7 @@ If you run the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">csvplotter</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+<p>A small pop-up will appear, providing options to load the file, select the channel, and plot the data.</p>
 <figure class="align-center">
 <img alt="CSV Plotter" src="../../../_images/csvplotter.png" />
 </figure>
@@ -1301,6 +1285,7 @@ It is built using Flask and enables real-time interaction with data acquisition 
 <li><p>All applications can be run simultaneously by just starting the LSL stream once, reducing manual effort.</p></li>
 <li><p>Simplifies the process of managing multiple applications without needing separate terminal windows.</p></li>
 </ul>
+<p>To save the data in CSV files, first run the LSL Stream in a terminal, then launch any applications in a separate terminal (as explained above). Ignore the web interface option in this case.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Allows users to start the Lab Streaming Layer (LSL) process to stream biosignals.</p></li>
@@ -1324,7 +1309,7 @@ It is built using Flask and enables real-time interaction with data acquisition 
 </ul>
 </div></blockquote>
 <ul class="simple">
-<li><p>Install Flask and required Python packages if not already installed:</p></li>
+<li><p>Install all required dependencies:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">chords_requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
@@ -1407,18 +1392,16 @@ It is built using Flask and enables real-time interaction with data acquisition 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software Requirements</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-hardware">Setting up the hardware:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-the-code">Uploading the code:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-chords-python">Opening Chords-Python:</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-hardware">Setting up the hardware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-the-code">Uploading the code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-chords-python">Opening Chords-Python</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications:</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heart-rate-with-ecg">1. <cite>Heart Rate with ECG</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecg-with-heart-rate">1. <cite>ECG with Heart Rate</cite></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Overview</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Features</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-ecg-visualization">1. Real-Time ECG Visualization:</a></li>
@@ -1502,7 +1485,6 @@ It is built using Flask and enables real-time interaction with data acquisition 
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lsl-stream-integration">1. LSL Stream Integration:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-data-visualization">2. Real-Time Data Visualization:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#customizable-gui">3. Customizable GUI:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#efficient-data-handling">4. Efficient Data Handling:</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Running the Application</a></li>
@@ -1602,7 +1584,7 @@ It is built using Flask and enables real-time interaction with data acquisition 
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Mar 20, 2025.
+  Last updated on Mar 24, 2025.
   <br/>
 </p></div>
       
