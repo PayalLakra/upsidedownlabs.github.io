@@ -350,7 +350,7 @@ Running the Application
 
 To run the EEG with FFT, execute the following command in a terminal:
 
-.. code-block:: python
+.. code-block:: console
 
    python ffteeg.py
 
@@ -400,7 +400,7 @@ Running the Application
 
 To run the EEG Tug of War, execute the following command in a terminal:
 
-.. code-block:: python
+.. code-block:: console
 
    python game.py
 
@@ -451,7 +451,7 @@ Running the Application
 
 To run the EEG Beetle Game, execute the following command in a terminal:
 
-.. code-block:: python
+.. code-block:: console
 
    python beetle.py
 
@@ -494,7 +494,7 @@ Running the Application
 
 To run the GUI Visualization, execute the following command in a terminal:
 
-.. code-block:: python
+.. code-block:: console
 
    python gui.py
 
@@ -653,7 +653,7 @@ Running the Web Interface
 
 - Run the Flask server using the following command:  
 
-.. code-block:: python
+.. code-block:: console
    
    python app.py
 
