@@ -70,7 +70,7 @@ Follow these steps to set up and install Chords-Python:
    - You can download the Chords-Python repository from GitHub by visiting the following link: `Chords-Python <https://github.com/upsidedownlabs/Chords-Python/>`_.
    - Or, You can clone the repository using Git by running the following command:
 
-   .. code-block:: python
+   .. code-block:: console
       
       git clone https://github.com/upsidedownlabs/Chords-Python.git
 
@@ -82,13 +82,13 @@ Follow these steps to set up and install Chords-Python:
    - Navigate to the directory where you have cloned the repository.
    - Run the following command to create a virtual environment:
 
-   .. code-block:: python
+   .. code-block:: console
       
       python -m venv venv
 
    - To activate the virtual environment:
       - **On Windows**:
-      .. code-block:: python
+      .. code-block:: console
 
          .\venv\Scripts\activate
 
@@ -208,7 +208,7 @@ Running the Application
 
 To run the ECG with Heart Rate application, execute the following command in a terminal:
 
-.. code-block:: python
+.. code-block:: console
 
    python heartbeat_ecg.py
 
@@ -587,7 +587,7 @@ Running the Application
 
 To run the CSV Plotter, execute the following command in a terminal:
 
-.. code-block:: python
+.. code-block:: console
 
    python csvplotter.py
 
@@ -640,11 +640,11 @@ Running the Web Interface
 
 - Install all required dependencies:  
 
-.. code-block:: python
+.. code-block:: console
    
    pip install chords_requirements.txt
 
-.. code-block:: python
+.. code-block:: console
    
    pip install app_requirements.txt
 
