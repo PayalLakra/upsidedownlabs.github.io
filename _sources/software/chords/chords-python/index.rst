@@ -142,7 +142,7 @@ Wi-Fi
 =====
 
 1. Upload the Wi-Fi firmware through the ``Chords-Arduino-Firmware`` repository
-2. Turn on the device and connect to the same Wi-Fi network as your device
+2. Turn on the device and connect to the access point created by the device (e.g., ``npg-lite-2``)
 3. In the web interface:
 
    - Click the **Wi-Fi** button
