@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>EEG Guide &#8212; upsidedownlabs.github.io  documentation</title>
+    <title>Recording Quality EEG &#8212; upsidedownlabs.github.io  documentation</title>
   
   
   
@@ -47,8 +47,8 @@
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../_static/design-tabs.js?v=36754332"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'guides/troubleshoot/eeg-guide/index';</script>
-    <link rel="canonical" href="docs.upsidedownlabs.tech/guides/troubleshoot/eeg-guide/index.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'guides/troubleshoot/recording_quality_eeg/index';</script>
+    <link rel="canonical" href="docs.upsidedownlabs.tech/guides/troubleshoot/recording_quality_eeg/index.html" />
     <link rel="icon" href="../../../_static/logo_sqr_bgw.svg"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -571,7 +571,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tips/index.html">Tips for best signal acquisition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../fix-hardware-setup/index.html">Fixing hardware setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../resolve-software-issues/index.html">Resolving software issues</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">EEG Guide</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Recording Quality EEG</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contribution Guide</span></p>
 <ul class="nav bd-sidenav">
@@ -614,7 +614,7 @@
     
     <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Guides</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">EEG Guide</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Recording Quality EEG</span></li>
   </ul>
 </nav>
 </div>
@@ -631,8 +631,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="eeg-guide">
-<span id="id1"></span><h1>EEG Guide<a class="headerlink" href="#eeg-guide" title="Link to this heading">#</a></h1>
+  <section id="recording-quality-eeg">
+<span id="id1"></span><h1>Recording Quality EEG<a class="headerlink" href="#recording-quality-eeg" title="Link to this heading">#</a></h1>
 <p>This guide will help you set up and verify your EEG signals using the BioAmp Hardware and Chords software.</p>
 <section id="step-1-skin-preparation">
 <h2>Step 1: Skin Preparation<a class="headerlink" href="#step-1-skin-preparation" title="Link to this heading">#</a></h2>
@@ -642,19 +642,29 @@
 <li><p>Reduce electrode-skin impedance</p></li>
 <li><p>Improve overall signal quality</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Need help with skin prep? Check out the full guide here: <a class="reference internal" href="../../usage-guides/skin-preparation/index.html#skin-preparation"><span class="std std-ref">Skin Preparation Guide</span></a></p>
+</div>
 </section>
 <section id="step-2-connecting-bioamp-cables-to-the-hardware">
 <h2>Step 2: Connecting BioAmp Cables to the Hardware<a class="headerlink" href="#step-2-connecting-bioamp-cables-to-the-hardware" title="Link to this heading">#</a></h2>
 <p>Connect the BioAmp cables to the appropriate input channels of your EEG device. Make sure the ground and reference electrodes are securely connected to the body.</p>
-<figure class="align-center">
+<figure class="align-center" id="id2">
 <img alt="BioAmp hardware connection" src="../../../_images/connections.png" />
+<figcaption>
+<p><span class="caption-text">BioAmp hardware connection</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
 </figure>
 </section>
 <section id="step-3-attaching-gel-electrodes-on-targeted-areas">
 <h2>Step 3: Attaching Gel Electrodes on Targeted Areas<a class="headerlink" href="#step-3-attaching-gel-electrodes-on-targeted-areas" title="Link to this heading">#</a></h2>
 <p>Place the gel-based electrodes firmly on the targeted scalp regions—typically the frontal (e.g., Fp1, Fp2) or occipital (e.g., O1, O2) lobes—depending on your signal of interest. Ensure that the electrodes have good skin contact and are not loose.</p>
-<figure class="align-center">
+<figure class="align-center" id="id3">
 <img alt="EEG gel electrode placement" src="../../../_images/eeg_place.jpg" />
+<figcaption>
+<p><span class="caption-text">EEG gel electrode placement</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
 </figure>
 </section>
 <section id="step-4-open-chords-software-to-visualize-signals">
@@ -662,7 +672,7 @@
 <ol class="arabic simple">
 <li><p>Open a Chromium-based browser such as <strong>Google Chrome</strong>, <strong>Microsoft Edge</strong>, <strong>Opera</strong>, or <strong>Brave</strong>.</p></li>
 <li><p>Go to: <a class="reference external" href="https://chords.upsidedownlabs.tech">https://chords.upsidedownlabs.tech</a></p></li>
-<li><p>Click on <strong>Chords-Visualizer</strong>.</p></li>
+<li><p>Click on <strong>Visualize Now</strong> then <strong>Chords-Visualizer</strong>.</p></li>
 <li><p>Connect your device via <strong>Serial</strong> by selecting your device’s port.</p></li>
 <li><p>Begin real-time visualization of your EEG signals.</p></li>
 </ol>
@@ -673,16 +683,22 @@
 <ul class="simple">
 <li><p><strong>Eye Blinks</strong></p></li>
 </ul>
-<p>Expect sharp deflections or spikes when you blink.</p>
-<figure class="align-center">
+<p>Blinking creates sharp spikes in the EEG signal - these are EOG artifacts caused by eye movements.</p>
+<figure class="align-center" id="id4">
 <img alt="Eye blink waveform" src="../../../_images/eye_blink.jpg" />
+<figcaption>
+<p><span class="caption-text">Eye blink waveform</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
 </figure>
 <ul class="simple">
 <li><p><strong>Jaw Clench</strong></p></li>
 </ul>
-<p>A strong jaw clench produces high-amplitude artifacts in the EEG signal due to facial muscle activity.</p>
-<figure class="align-center">
+<p>A strong jaw clench produces EMG artifacts in the EEG signal - these are due to facial muscle activity.</p>
+<figure class="align-center" id="id5">
 <img alt="Jaw clench waveform" src="../../../_images/jaw_clench.jpg" />
+<figcaption>
+<p><span class="caption-text">Jaw clench waveform</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
 </figure>
 <ul class="simple">
 <li><p><strong>Alpha Waves (Eyes Closed)</strong></p></li>
@@ -691,9 +707,12 @@
 <p class="admonition-title">Note</p>
 <p>This may or may not be easily observable for all users.</p>
 </div>
-<p>Close your eyes and stay relaxed. Look for rhythmic waveforms in the 8–12 Hz range, typically more visible in occipital channels.</p>
-<figure class="align-center">
+<p>Close your eyes and relax. We’re recording EEG from the frontal cortex to observe alpha waves (8–12 Hz), which appear more clearly when you’re calm.</p>
+<figure class="align-center" id="id6">
 <img alt="Alpha waves EEG" src="../../../_images/alpha_waves.jpg" />
+<figcaption>
+<p><span class="caption-text">Alpha waves EEG</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
 </figure>
 <ul class="simple">
 <li><p><strong>Beta Candle Test</strong></p></li>
@@ -705,8 +724,11 @@
 <p>To try this:
 Open <strong>Chords Software</strong> → <strong>Chords Visualizer</strong> → <strong>FFT Visualizer</strong> → Connect your device (Serial/Bluetooth).
 Then, activate the <strong>Beta Candle</strong> feature. Focus deeply on the candle. As your focus increases, the candle’s brightness and numerical value should increase. When you defocus, the value drops and the candle dims or blows out.</p>
-<figure class="align-center">
+<figure class="align-center" id="id7">
 <img alt="Beta candle test" src="../../../_images/beta_candle.jpg" />
+<figcaption>
+<p><span class="caption-text">Beta candle test</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
 </figure>
 <p>If all or most of these responses are clearly visible, your setup is correct, and your EEG signals are stable enough for analysis.</p>
 </section>
@@ -771,7 +793,7 @@ Then, activate the <strong>Beta Candle</strong> feature. Focus deeply on the can
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/upsidedownlabs/upsidedownlabs.github.io/edit/mainguides/troubleshoot/eeg-guide/index.rst">
+    <a href="https://github.com/upsidedownlabs/upsidedownlabs.github.io/edit/mainguides/troubleshoot/recording_quality_eeg/index.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -786,7 +808,7 @@ Then, activate the <strong>Beta Candle</strong> feature. Focus deeply on the can
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../../_sources/guides/troubleshoot/eeg-guide/index.rst">
+    <a href="../../../_sources/guides/troubleshoot/recording_quality_eeg/index.rst">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
