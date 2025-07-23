@@ -761,27 +761,26 @@ Make sure latest version of Python is installed.</p></li>
 <li><p><strong>Download the Repository</strong>:</p>
 <ul class="simple">
 <li><p>You can download the Chords-Python repository from GitHub by visiting the following link: <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Python/">Chords-Python</a>.</p></li>
-<li><p>Or, You can clone the repository using Git by running the following command:</p></li>
+<li><p>Or, you can clone the repository using Git by running the following command:</p></li>
 </ul>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/upsidedownlabs/Chords-Python.git</span>
 </pre></div>
 </div>
 </li>
 <li><p><strong>Create and Activate a Virtual Environment</strong> (if not already):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv .venv</span>
-</pre></div>
-</div>
 <ul>
 <li><p><strong>On Windows</strong>:</p>
 <blockquote>
-<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.venv\Scripts\activate</span>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv .venv</span>
+<span class="go">.venv\Scripts\activate</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p><strong>On macOS/Linux</strong>:</p>
 <blockquote>
-<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source .venv/bin/activate</span>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 -m venv .venv</span>
+<span class="go">source .venv/bin/activate</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -795,7 +794,8 @@ Make sure latest version of Python is installed.</p></li>
 </li>
 <li><p><strong>Run the Application</strong>:</p>
 <p>Navigate to the <cite>chordspy</cite> folder and run:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd chordspy                            # Navigate to the chordspy folder</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>from<span class="w"> </span>repository<span class="w"> </span>root
+<span class="go">cd chordspy                            # Navigate to the chordspy folder</span>
 <span class="go">python app.py                          # To launch the web interface</span>
 <span class="go">python connection.py --protocol usb    # To start LSL stream via USB</span>
 <span class="go">python connection.py --protocol ble    # To start LSL stream via BLE</span>
@@ -803,7 +803,8 @@ Make sure latest version of Python is installed.</p></li>
 </pre></div>
 </div>
 <p>To run any application, open a new terminal:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd chordspy           # Navigate to the chordspy folder</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>from<span class="w"> </span>repository<span class="w"> </span>root
+<span class="go">cd chordspy           # Navigate to the chordspy folder</span>
 <span class="go">python gui.py         # GUI Application</span>
 <span class="go">python ffteeg.py      # EEG with FFT Analysis</span>
 </pre></div>
