@@ -700,8 +700,8 @@ Go to tools, select your board, and the correct COM port. Now, hit the upload bu
 <section id="opening-chords-python">
 <span id="using-chords-python"></span><h2>Opening Chords-Python<a class="headerlink" href="#opening-chords-python" title="Link to this heading">#</a></h2>
 <p>There are two ways to use Chords-Python:</p>
-<p><strong>A. Using the `chordspy` Python Package (Recommended)</strong>
-<strong>B. Running Scripts Manually from the Repository</strong></p>
+<p><strong>A. Using the `chordspy` Python Package (Recommended)</strong></p>
+<p><strong>B. Running Scripts Manually from the Repository</strong></p>
 <section id="a-using-the-chordspy-package">
 <h3>A. Using the chordspy Package<a class="headerlink" href="#a-using-the-chordspy-package" title="Link to this heading">#</a></h3>
 <p>This is the smoothest way to get started. Follow the steps below:</p>
@@ -709,20 +709,23 @@ Go to tools, select your board, and the correct COM port. Now, hit the upload bu
 <li><p><strong>Install Python</strong>
 Make sure latest version of Python is installed.</p></li>
 <li><p><strong>Create and Activate a Virtual Environment</strong>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv .venv</span>
-</pre></div>
-</div>
 <ul>
 <li><p><strong>On Windows</strong>:</p>
 <blockquote>
-<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.venv\Scripts\activate</span>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv .venv</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.venv\Scripts\activate</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p><strong>On macOS/Linux</strong>:</p>
 <blockquote>
-<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source .venv/bin/activate</span>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 -m venv .venv</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source .venv/bin/activate</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -772,7 +775,9 @@ Make sure latest version of Python is installed.</p></li>
 <li><p><strong>On Windows</strong>:</p>
 <blockquote>
 <div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv .venv</span>
-<span class="go">.venv\Scripts\activate</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.venv\Scripts\activate</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -780,7 +785,9 @@ Make sure latest version of Python is installed.</p></li>
 <li><p><strong>On macOS/Linux</strong>:</p>
 <blockquote>
 <div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 -m venv .venv</span>
-<span class="go">source .venv/bin/activate</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source .venv/bin/activate</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1452,7 +1459,9 @@ Make sure latest version of Python is installed.</p></li>
 </section>
 <section id="eog-keystroke-emulator">
 <h3>8. <cite>EOG Keystroke Emulator</cite><a class="headerlink" href="#eog-keystroke-emulator" title="Link to this heading">#</a></h3>
-<section id="id16">
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/ZJmUUtHJj08" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="id16">
 <h4>Overview<a class="headerlink" href="#id16" title="Link to this heading">#</a></h4>
 <p>The <strong>EOG Keystroke Emulator</strong> is a Python-based application designed to detect eye blinks using Electrooculography (EOG) signals and translate them into keystrokes. The application leverages the Lab Streaming Layer (LSL) protocol to acquire real-time EOG data, processes the signal to detect blinks, and simulates a spacebar press whenever a blink is detected. The application is built using the <cite>tkinter</cite> library for the graphical user interface (GUI) and integrates with <cite>pyautogui</cite> for keystroke emulation.</p>
 </section>
